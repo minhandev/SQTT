@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="quanlytrangthietbiSQTTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DonVi">
+    <Key>
+      <PropertyRef Name="MaDV" />
+    </Key>
+    <Property Name="MaDV" Type="Int32" Nullable="false" />
+    <Property Name="TenDonVi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiaDiem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LuanChuyens" Relationship="Self.FK_LuanChuyen_DonVi" FromRole="DonVi" ToRole="LuanChuyen" />
+  </EntityType>
+  <EntityType Name="DonViTinh">
+    <Key>
+      <PropertyRef Name="MaDVT" />
+    </Key>
+    <Property Name="MaDVT" Type="Int32" Nullable="false" />
+    <Property Name="TenDVT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LinhKiens" Relationship="Self.FK_LinhKien_DonViTinh" FromRole="DonViTinh" ToRole="LinhKien" />
+    <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_DonViTinh" FromRole="DonViTinh" ToRole="ThietBi" />
+  </EntityType>
+  <EntityType Name="LinhKien">
+    <Key>
+      <PropertyRef Name="MaLK" />
+    </Key>
+    <Property Name="MaLK" Type="Int32" Nullable="false" />
+    <Property Name="TenLK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NamSX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaTB" Type="Int32" Nullable="false" />
+    <Property Name="MaDVT" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DonViTinh" Relationship="Self.FK_LinhKien_DonViTinh" FromRole="LinhKien" ToRole="DonViTinh" />
+    <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_LinhKien" FromRole="LinhKien" ToRole="ThietBi" />
+  </EntityType>
+  <EntityType Name="LoaiSuaChua">
+    <Key>
+      <PropertyRef Name="MaLSC" />
+    </Key>
+    <Property Name="MaLSC" Type="Int32" Nullable="false" />
+    <Property Name="TenLoaiSuaChua" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LKThay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SuaChuas" Relationship="Self.FK_SuaChua_LoaiSuaChua" FromRole="LoaiSuaChua" ToRole="SuaChua" />
+  </EntityType>
+  <EntityType Name="LoaiThuHoi">
+    <Key>
+      <PropertyRef Name="MaLTH" />
+    </Key>
+    <Property Name="MaLTH" Type="Int32" Nullable="false" />
+    <Property Name="TenLoaiThuHoi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ThuHois" Relationship="Self.FK_ThuHoi_LoaiThuHoi" FromRole="LoaiThuHoi" ToRole="ThuHoi" />
+  </EntityType>
+  <EntityType Name="LuanChuyen">
+    <Key>
+      <PropertyRef Name="MaLC" />
+    </Key>
+    <Property Name="MaTB" Type="Int32" Nullable="false" />
+    <Property Name="ThoiGian" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ghichu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaNguoiPhuTrach" Type="Int32" Nullable="false" />
+    <Property Name="MaDV" Type="Int32" Nullable="false" />
+    <Property Name="MaLC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DonVi" Relationship="Self.FK_LuanChuyen_DonVi" FromRole="LuanChuyen" ToRole="DonVi" />
+    <NavigationProperty Name="NguoiPhuTrach" Relationship="Self.FK_LuanChuyen_NguoiPhuTrach" FromRole="LuanChuyen" ToRole="NguoiPhuTrach" />
+    <NavigationProperty Name="ThietBi" Relationship="Self.FK_LuanChuyen_ThietBi" FromRole="LuanChuyen" ToRole="ThietBi" />
+  </EntityType>
+  <EntityType Name="NguoiPhuTrach">
+    <Key>
+      <PropertyRef Name="MaNguoiPhuTrach" />
+    </Key>
+    <Property Name="MaNguoiPhuTrach" Type="Int32" Nullable="false" />
+    <Property Name="TenNguoiPhuTrach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ThoiGian" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MaDV" Type="Int32" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LuanChuyens" Relationship="Self.FK_LuanChuyen_NguoiPhuTrach" FromRole="NguoiPhuTrach" ToRole="LuanChuyen" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="Int32" Nullable="false" />
+    <Property Name="TenNhaCungCap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_NhaCungCap" FromRole="NhaCungCap" ToRole="ThietBi" />
+  </EntityType>
+  <EntityType Name="NhomThietBi">
+    <Key>
+      <PropertyRef Name="MaNhom" />
+    </Key>
+    <Property Name="MaNhom" Type="Int32" Nullable="false" />
+    <Property Name="TenNhom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_NhomThietBi" FromRole="NhomThietBi" ToRole="ThietBi" />
+  </EntityType>
+  <EntityType Name="PhanLoai">
+    <Key>
+      <PropertyRef Name="MaPL" />
+    </Key>
+    <Property Name="MaPL" Type="Int32" Nullable="false" />
+    <Property Name="MaTB" Type="Int32" Nullable="false" />
+    <Property Name="NamPhanLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ChatLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ThietBi" Relationship="Self.FK_PhanLoai_ThietBi" FromRole="PhanLoai" ToRole="ThietBi" />
+    <NavigationProperty Name="SuaChuas" Relationship="Self.FK_SuaChua_PhanLoai" FromRole="PhanLoai" ToRole="SuaChua" />
+    <NavigationProperty Name="ThuHois" Relationship="Self.FK_ThuHoi_PhanLoai" FromRole="PhanLoai" ToRole="ThuHoi" />
+  </EntityType>
+  <EntityType Name="SuaChua">
+    <Key>
+      <PropertyRef Name="MaSC" />
+    </Key>
+    <Property Name="MaLSC" Type="Int32" Nullable="false" />
+    <Property Name="thoigian" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MaTB" Type="Int32" Nullable="false" />
+    <Property Name="MaPL" Type="Int32" Nullable="false" />
+    <Property Name="MaSC" Type="Int32" Nullable="false" />
+    <Property Name="ChatLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LoaiSuaChua" Relationship="Self.FK_SuaChua_LoaiSuaChua" FromRole="SuaChua" ToRole="LoaiSuaChua" />
+    <NavigationProperty Name="PhanLoai" Relationship="Self.FK_SuaChua_PhanLoai" FromRole="SuaChua" ToRole="PhanLoai" />
+    <NavigationProperty Name="ThietBi" Relationship="Self.FK_SuaChua_ThietBi" FromRole="SuaChua" ToRole="ThietBi" />
+  </EntityType>
+  <EntityType Name="ThietBi">
+    <Key>
+      <PropertyRef Name="MaTB" />
+    </Key>
+    <Property Name="MaTB" Type="Int32" Nullable="false" />
+    <Property Name="TenThietBi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaNCC" Type="Int32" Nullable="false" />
+    <Property Name="MaNhom" Type="Int32" Nullable="false" />
+    <Property Name="MaDVT" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaLK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DonViTinh" Relationship="Self.FK_ThietBi_DonViTinh" FromRole="ThietBi" ToRole="DonViTinh" />
+    <NavigationProperty Name="LinhKien" Relationship="Self.FK_ThietBi_LinhKien" FromRole="ThietBi" ToRole="LinhKien" />
+    <NavigationProperty Name="LuanChuyens" Relationship="Self.FK_LuanChuyen_ThietBi" FromRole="ThietBi" ToRole="LuanChuyen" />
+    <NavigationProperty Name="NhaCungCap" Relationship="Self.FK_ThietBi_NhaCungCap" FromRole="ThietBi" ToRole="NhaCungCap" />
+    <NavigationProperty Name="NhomThietBi" Relationship="Self.FK_ThietBi_NhomThietBi" FromRole="ThietBi" ToRole="NhomThietBi" />
+    <NavigationProperty Name="PhanLoais" Relationship="Self.FK_PhanLoai_ThietBi" FromRole="ThietBi" ToRole="PhanLoai" />
+    <NavigationProperty Name="SuaChuas" Relationship="Self.FK_SuaChua_ThietBi" FromRole="ThietBi" ToRole="SuaChua" />
+    <NavigationProperty Name="ThuHois" Relationship="Self.FK_ThuHoi_ThietBi" FromRole="ThietBi" ToRole="ThuHoi" />
+  </EntityType>
+  <EntityType Name="ThuHoi">
+    <Key>
+      <PropertyRef Name="MaTH" />
+    </Key>
+    <Property Name="MaLTH" Type="Int32" Nullable="false" />
+    <Property Name="MaTB" Type="Int32" Nullable="false" />
+    <Property Name="MaPL" Type="Int32" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Thoigian" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MaTH" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LoaiThuHoi" Relationship="Self.FK_ThuHoi_LoaiThuHoi" FromRole="ThuHoi" ToRole="LoaiThuHoi" />
+    <NavigationProperty Name="PhanLoai" Relationship="Self.FK_ThuHoi_PhanLoai" FromRole="ThuHoi" ToRole="PhanLoai" />
+    <NavigationProperty Name="ThietBi" Relationship="Self.FK_ThuHoi_ThietBi" FromRole="ThuHoi" ToRole="ThietBi" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="MaNd" />
+    </Key>
+    <Property Name="MaNd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Taikhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Matkhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_LuanChuyen_DonVi">
+    <End Role="DonVi" Type="Self.DonVi" Multiplicity="1" />
+    <End Role="LuanChuyen" Type="Self.LuanChuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonVi">
+        <PropertyRef Name="MaDV" />
+      </Principal>
+      <Dependent Role="LuanChuyen">
+        <PropertyRef Name="MaDV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LinhKien_DonViTinh">
+    <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
+    <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonViTinh">
+        <PropertyRef Name="MaDVT" />
+      </Principal>
+      <Dependent Role="LinhKien">
+        <PropertyRef Name="MaDVT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThietBi_DonViTinh">
+    <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonViTinh">
+        <PropertyRef Name="MaDVT" />
+      </Principal>
+      <Dependent Role="ThietBi">
+        <PropertyRef Name="MaDVT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThietBi_LinhKien">
+    <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="1" />
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LinhKien">
+        <PropertyRef Name="MaLK" />
+      </Principal>
+      <Dependent Role="ThietBi">
+        <PropertyRef Name="MaLK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SuaChua_LoaiSuaChua">
+    <End Role="LoaiSuaChua" Type="Self.LoaiSuaChua" Multiplicity="1" />
+    <End Role="SuaChua" Type="Self.SuaChua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiSuaChua">
+        <PropertyRef Name="MaLSC" />
+      </Principal>
+      <Dependent Role="SuaChua">
+        <PropertyRef Name="MaLSC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThuHoi_LoaiThuHoi">
+    <End Role="LoaiThuHoi" Type="Self.LoaiThuHoi" Multiplicity="1" />
+    <End Role="ThuHoi" Type="Self.ThuHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiThuHoi">
+        <PropertyRef Name="MaLTH" />
+      </Principal>
+      <Dependent Role="ThuHoi">
+        <PropertyRef Name="MaLTH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LuanChuyen_NguoiPhuTrach">
+    <End Role="NguoiPhuTrach" Type="Self.NguoiPhuTrach" Multiplicity="1" />
+    <End Role="LuanChuyen" Type="Self.LuanChuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiPhuTrach">
+        <PropertyRef Name="MaNguoiPhuTrach" />
+      </Principal>
+      <Dependent Role="LuanChuyen">
+        <PropertyRef Name="MaNguoiPhuTrach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LuanChuyen_ThietBi">
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="1" />
+    <End Role="LuanChuyen" Type="Self.LuanChuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThietBi">
+        <PropertyRef Name="MaTB" />
+      </Principal>
+      <Dependent Role="LuanChuyen">
+        <PropertyRef Name="MaTB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThietBi_NhaCungCap">
+    <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="1" />
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="ThietBi">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThietBi_NhomThietBi">
+    <End Role="NhomThietBi" Type="Self.NhomThietBi" Multiplicity="1" />
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhomThietBi">
+        <PropertyRef Name="MaNhom" />
+      </Principal>
+      <Dependent Role="ThietBi">
+        <PropertyRef Name="MaNhom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhanLoai_ThietBi">
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="1" />
+    <End Role="PhanLoai" Type="Self.PhanLoai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThietBi">
+        <PropertyRef Name="MaTB" />
+      </Principal>
+      <Dependent Role="PhanLoai">
+        <PropertyRef Name="MaTB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SuaChua_PhanLoai">
+    <End Role="PhanLoai" Type="Self.PhanLoai" Multiplicity="1" />
+    <End Role="SuaChua" Type="Self.SuaChua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhanLoai">
+        <PropertyRef Name="MaPL" />
+      </Principal>
+      <Dependent Role="SuaChua">
+        <PropertyRef Name="MaPL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThuHoi_PhanLoai">
+    <End Role="PhanLoai" Type="Self.PhanLoai" Multiplicity="1" />
+    <End Role="ThuHoi" Type="Self.ThuHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhanLoai">
+        <PropertyRef Name="MaPL" />
+      </Principal>
+      <Dependent Role="ThuHoi">
+        <PropertyRef Name="MaPL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SuaChua_ThietBi">
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="1" />
+    <End Role="SuaChua" Type="Self.SuaChua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThietBi">
+        <PropertyRef Name="MaTB" />
+      </Principal>
+      <Dependent Role="SuaChua">
+        <PropertyRef Name="MaTB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThuHoi_ThietBi">
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="1" />
+    <End Role="ThuHoi" Type="Self.ThuHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThietBi">
+        <PropertyRef Name="MaTB" />
+      </Principal>
+      <Dependent Role="ThuHoi">
+        <PropertyRef Name="MaTB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SQTTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DonVis" EntityType="Self.DonVi" />
+    <EntitySet Name="DonViTinhs" EntityType="Self.DonViTinh" />
+    <EntitySet Name="LinhKiens" EntityType="Self.LinhKien" />
+    <EntitySet Name="LoaiSuaChuas" EntityType="Self.LoaiSuaChua" />
+    <EntitySet Name="LoaiThuHois" EntityType="Self.LoaiThuHoi" />
+    <EntitySet Name="LuanChuyens" EntityType="Self.LuanChuyen" />
+    <EntitySet Name="NguoiPhuTraches" EntityType="Self.NguoiPhuTrach" />
+    <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
+    <EntitySet Name="NhomThietBis" EntityType="Self.NhomThietBi" />
+    <EntitySet Name="PhanLoais" EntityType="Self.PhanLoai" />
+    <EntitySet Name="SuaChuas" EntityType="Self.SuaChua" />
+    <EntitySet Name="ThietBis" EntityType="Self.ThietBi" />
+    <EntitySet Name="ThuHois" EntityType="Self.ThuHoi" />
+    <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
+    <AssociationSet Name="FK_LuanChuyen_DonVi" Association="Self.FK_LuanChuyen_DonVi">
+      <End Role="DonVi" EntitySet="DonVis" />
+      <End Role="LuanChuyen" EntitySet="LuanChuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LinhKien_DonViTinh" Association="Self.FK_LinhKien_DonViTinh">
+      <End Role="DonViTinh" EntitySet="DonViTinhs" />
+      <End Role="LinhKien" EntitySet="LinhKiens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThietBi_DonViTinh" Association="Self.FK_ThietBi_DonViTinh">
+      <End Role="DonViTinh" EntitySet="DonViTinhs" />
+      <End Role="ThietBi" EntitySet="ThietBis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThietBi_LinhKien" Association="Self.FK_ThietBi_LinhKien">
+      <End Role="LinhKien" EntitySet="LinhKiens" />
+      <End Role="ThietBi" EntitySet="ThietBis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SuaChua_LoaiSuaChua" Association="Self.FK_SuaChua_LoaiSuaChua">
+      <End Role="LoaiSuaChua" EntitySet="LoaiSuaChuas" />
+      <End Role="SuaChua" EntitySet="SuaChuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThuHoi_LoaiThuHoi" Association="Self.FK_ThuHoi_LoaiThuHoi">
+      <End Role="LoaiThuHoi" EntitySet="LoaiThuHois" />
+      <End Role="ThuHoi" EntitySet="ThuHois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LuanChuyen_NguoiPhuTrach" Association="Self.FK_LuanChuyen_NguoiPhuTrach">
+      <End Role="NguoiPhuTrach" EntitySet="NguoiPhuTraches" />
+      <End Role="LuanChuyen" EntitySet="LuanChuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LuanChuyen_ThietBi" Association="Self.FK_LuanChuyen_ThietBi">
+      <End Role="ThietBi" EntitySet="ThietBis" />
+      <End Role="LuanChuyen" EntitySet="LuanChuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThietBi_NhaCungCap" Association="Self.FK_ThietBi_NhaCungCap">
+      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+      <End Role="ThietBi" EntitySet="ThietBis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThietBi_NhomThietBi" Association="Self.FK_ThietBi_NhomThietBi">
+      <End Role="NhomThietBi" EntitySet="NhomThietBis" />
+      <End Role="ThietBi" EntitySet="ThietBis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhanLoai_ThietBi" Association="Self.FK_PhanLoai_ThietBi">
+      <End Role="ThietBi" EntitySet="ThietBis" />
+      <End Role="PhanLoai" EntitySet="PhanLoais" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SuaChua_PhanLoai" Association="Self.FK_SuaChua_PhanLoai">
+      <End Role="PhanLoai" EntitySet="PhanLoais" />
+      <End Role="SuaChua" EntitySet="SuaChuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThuHoi_PhanLoai" Association="Self.FK_ThuHoi_PhanLoai">
+      <End Role="PhanLoai" EntitySet="PhanLoais" />
+      <End Role="ThuHoi" EntitySet="ThuHois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SuaChua_ThietBi" Association="Self.FK_SuaChua_ThietBi">
+      <End Role="ThietBi" EntitySet="ThietBis" />
+      <End Role="SuaChua" EntitySet="SuaChuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThuHoi_ThietBi" Association="Self.FK_ThuHoi_ThietBi">
+      <End Role="ThietBi" EntitySet="ThietBis" />
+      <End Role="ThuHoi" EntitySet="ThuHois" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
