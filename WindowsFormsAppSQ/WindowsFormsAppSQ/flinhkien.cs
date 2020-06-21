@@ -10,41 +10,47 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppSQ
 {
-    public partial class floaisuachua : Form
+    public partial class flinhkien : Form
     {
         SQTTEntities db = new SQTTEntities();
-        public floaisuachua()
+        public flinhkien()
         {
             InitializeComponent();
             LoadData();
             Biding();
         }
+
         private void LoadData()
         {
-            var data = from c in db.LoaiSuaChuas select new { Mã = c.MaLSC, Tên = c.TenLoaiSuaChua, Linh_kiện = c.LKThay };
+            var data = from c in db.LinhKiens select new { Mã = c.MaLK, Tên = c.TenLK, Năm_SX = c.NamSX, Đơn_vị = c.DonViTinh.TenDVT };
             dataGridView.DataSource = data.ToList();
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            comboBox.DataSource = db.DonViTinhs.ToList();
+            comboBox.DisplayMember = "TenDVT";
+            comboBox.ValueMember = "MaDVT";
         }
 
         private void Biding()
         {
             txtm.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Mã"));
             txtt.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Tên"));
-            txttt.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Linh_kiện"));
+            comboBox.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Đơn_vị"));
+            txtd.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Năm_SX"));
         }
 
-        private void btlThem_Click(object sender, EventArgs e)
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            txtm.Text = " ";
-            txttt.Text = " ";
-            txtt.Text = " ";
-            txtm.Enabled = true;
+
         }
 
-        private void btlXoa_Click(object sender, EventArgs e)
+        private void btlSua_Click(object sender, EventArgs e)
         {
-            var a = db.LoaiSuaChuas.Find(Convert.ToInt32(txtm.Text));
-            db.LoaiSuaChuas.Remove(a);
+            txtm.Enabled = false;
+            var a = db.LinhKiens.Find(Convert.ToInt32(txtm.Text));
+            a.TenLK = txtt.Text;
+            a.NamSX = txtm.Text;
+            a.MaDVT = Convert.ToInt32(comboBox.SelectedValue);
             if (db.SaveChanges() > 0)
             {
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -53,11 +59,11 @@ namespace WindowsFormsAppSQ
             else MessageBox.Show("Lỗi", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
         }
 
-        private void btlSua_Click(object sender, EventArgs e)
+        private void btlXoa_Click(object sender, EventArgs e)
         {
-            var a = db.LoaiSuaChuas.Find(Convert.ToInt32(txtm.Text));
-            a.TenLoaiSuaChua = txtt.Text;
-            a.LKThay = txttt.Text;
+            txtm.Enabled = false;
+            var a = db.LinhKiens.Find(Convert.ToInt32(txtm.Text));
+            db.LinhKiens.Remove(a);
             if (db.SaveChanges() > 0)
             {
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -68,13 +74,14 @@ namespace WindowsFormsAppSQ
 
         private void btlLuu_Click(object sender, EventArgs e)
         {
-            LoaiSuaChua a = new LoaiSuaChua()
+            LinhKien a = new LinhKien()
             {
-                MaLSC = Convert.ToInt32(txtm.Text),
-                TenLoaiSuaChua = txtt.Text,
-                LKThay = txttt.Text
+                MaLK = Convert.ToInt32(txtm.Text),
+                TenLK = txtt.Text,
+                NamSX = txtd.Text,
+                MaDVT = Convert.ToInt32(comboBox.SelectedValue)
             };
-            db.LoaiSuaChuas.Add(a);
+            db.LinhKiens.Add(a);
             if (db.SaveChanges() > 0)
             {
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -90,8 +97,6 @@ namespace WindowsFormsAppSQ
 
         private void btlThoat_Click(object sender, EventArgs e)
         {
-            fmain f = new fmain();
-            f.Show();
             this.Hide();
         }
 

@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppSQ
 {
-    public partial class floaisuachua : Form
+    public partial class fdonvitinh : Form
     {
         SQTTEntities db = new SQTTEntities();
-        public floaisuachua()
+        public fdonvitinh()
         {
             InitializeComponent();
             LoadData();
             Biding();
         }
+
         private void LoadData()
         {
-            var data = from c in db.LoaiSuaChuas select new { Mã = c.MaLSC, Tên = c.TenLoaiSuaChua, Linh_kiện = c.LKThay };
+            var data = from c in db.DonViTinhs select new { Mã = c.MaDVT, Tên = c.TenDVT };
             dataGridView.DataSource = data.ToList();
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
@@ -30,21 +31,19 @@ namespace WindowsFormsAppSQ
         {
             txtm.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Mã"));
             txtt.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Tên"));
-            txttt.DataBindings.Add(new Binding("Text", dataGridView.DataSource, "Linh_kiện"));
         }
 
         private void btlThem_Click(object sender, EventArgs e)
         {
-            txtm.Text = " ";
-            txttt.Text = " ";
-            txtt.Text = " ";
             txtm.Enabled = true;
+            txtm.Text = " ";
+            txtt.Text = " ";
         }
 
         private void btlXoa_Click(object sender, EventArgs e)
         {
-            var a = db.LoaiSuaChuas.Find(Convert.ToInt32(txtm.Text));
-            db.LoaiSuaChuas.Remove(a);
+            var a = db.DonViTinhs.Find(Convert.ToInt32(txtm.Text));
+            db.DonViTinhs.Remove(a);
             if (db.SaveChanges() > 0)
             {
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -55,9 +54,8 @@ namespace WindowsFormsAppSQ
 
         private void btlSua_Click(object sender, EventArgs e)
         {
-            var a = db.LoaiSuaChuas.Find(Convert.ToInt32(txtm.Text));
-            a.TenLoaiSuaChua = txtt.Text;
-            a.LKThay = txttt.Text;
+            var a = db.DonViTinhs.Find(Convert.ToInt32(txtm.Text));
+            a.TenDVT = txtt.Text;
             if (db.SaveChanges() > 0)
             {
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -68,13 +66,12 @@ namespace WindowsFormsAppSQ
 
         private void btlLuu_Click(object sender, EventArgs e)
         {
-            LoaiSuaChua a = new LoaiSuaChua()
+            DonViTinh a = new DonViTinh()
             {
-                MaLSC = Convert.ToInt32(txtm.Text),
-                TenLoaiSuaChua = txtt.Text,
-                LKThay = txttt.Text
+                MaDVT = Convert.ToInt32(txtm.Text),
+                TenDVT = txtt.Text
             };
-            db.LoaiSuaChuas.Add(a);
+            db.DonViTinhs.Add(a);
             if (db.SaveChanges() > 0)
             {
                 MessageBox.Show("Thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

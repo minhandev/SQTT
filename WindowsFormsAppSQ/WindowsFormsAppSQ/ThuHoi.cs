@@ -22,7 +22,6 @@ namespace WindowsFormsAppSQ
         public int MaTH { get; set; }
     
         public virtual LoaiThuHoi LoaiThuHoi { get; set; }
-        public virtual PhanLoai PhanLoai { get; set; }
         public virtual ThietBi ThietBi { get; set; }
     }
 }

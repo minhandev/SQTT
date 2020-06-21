@@ -13,7 +13,6 @@
         <EntityTypeShape EntityType="quanlytrangthietbiSQTTModel.NguoiPhuTrach" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="quanlytrangthietbiSQTTModel.NhaCungCap" Width="1.5" PointX="3.75" PointY="12.625" IsExpanded="true" />
         <EntityTypeShape EntityType="quanlytrangthietbiSQTTModel.NhomThietBi" Width="1.5" PointX="3.75" PointY="15.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="quanlytrangthietbiSQTTModel.PhanLoai" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="quanlytrangthietbiSQTTModel.SuaChua" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="quanlytrangthietbiSQTTModel.ThietBi" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="quanlytrangthietbiSQTTModel.ThuHoi" Width="1.5" PointX="13.5" PointY="4.75" IsExpanded="true" />
@@ -27,9 +26,6 @@
         <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_ThuHoi_LoaiThuHoi" ManuallyRouted="false" />
         <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_ThietBi_NhaCungCap" ManuallyRouted="false" />
         <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_ThietBi_NhomThietBi" ManuallyRouted="false" />
-        <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_PhanLoai_ThietBi" ManuallyRouted="false" />
-        <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_SuaChua_PhanLoai" ManuallyRouted="false" />
-        <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_ThuHoi_PhanLoai" ManuallyRouted="false" />
         <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_SuaChua_ThietBi" ManuallyRouted="false" />
         <AssociationConnector Association="quanlytrangthietbiSQTTModel.FK_ThuHoi_ThietBi" ManuallyRouted="false" />
       </Diagram>

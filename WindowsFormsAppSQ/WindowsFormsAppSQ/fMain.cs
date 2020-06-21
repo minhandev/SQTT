@@ -60,9 +60,7 @@ namespace WindowsFormsAppSQ
 
         private void QuanLyStrip_Click(object sender, EventArgs e)
         {
-            fQuanly f = new fQuanly();
-            this.Hide();
-            f.Show();
+
         }
 
         private void nhómThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)

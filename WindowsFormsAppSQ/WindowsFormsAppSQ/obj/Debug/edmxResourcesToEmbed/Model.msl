@@ -78,18 +78,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PhanLoais">
-      <EntityTypeMapping TypeName="quanlytrangthietbiSQTTModel.PhanLoai">
-        <MappingFragment StoreEntitySet="PhanLoai">
-          <ScalarProperty Name="MaPL" ColumnName="MaPL" />
-          <ScalarProperty Name="MaTB" ColumnName="MaTB" />
-          <ScalarProperty Name="NamPhanLoai" ColumnName="NamPhanLoai" />
-          <ScalarProperty Name="ChatLuong" ColumnName="ChatLuong" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="SuaChuas">
       <EntityTypeMapping TypeName="quanlytrangthietbiSQTTModel.SuaChua">
         <MappingFragment StoreEntitySet="SuaChua">

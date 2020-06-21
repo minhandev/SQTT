@@ -70,6 +70,18 @@
     <Compile Include="fdonvi.Designer.cs">
       <DependentUpon>fdonvi.cs</DependentUpon>
     </Compile>
+    <Compile Include="fdonvitinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fdonvitinh.Designer.cs">
+      <DependentUpon>fdonvitinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flinhkien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flinhkien.Designer.cs">
+      <DependentUpon>flinhkien.cs</DependentUpon>
+    </Compile>
     <Compile Include="floaisuachua.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,12 +118,17 @@
     <Compile Include="fnphutrach.Designer.cs">
       <DependentUpon>fnphutrach.cs</DependentUpon>
     </Compile>
-    <Compile Include=".cs">
+    <Compile Include="fsuachua.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>.cs</DependentUpon>
+    <Compile Include="fsuachua.Designer.cs">
+      <DependentUpon>fsuachua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fthietbi.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fthietbi.Designer.cs">
+      <DependentUpon>fthietbi.cs</DependentUpon>
     </Compile>
     <Compile Include="LinhKien.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -149,9 +166,6 @@
     <Compile Include="NhomThietBi.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="PhanLoai.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuaChua.cs">
@@ -165,6 +179,12 @@
     </Compile>
     <EmbeddedResource Include="fdonvi.resx">
       <DependentUpon>fdonvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fdonvitinh.resx">
+      <DependentUpon>fdonvitinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flinhkien.resx">
+      <DependentUpon>flinhkien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="floaisuachua.resx">
       <DependentUpon>floaisuachua.cs</DependentUpon>
@@ -184,8 +204,11 @@
     <EmbeddedResource Include="fnphutrach.resx">
       <DependentUpon>fnphutrach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include=".resx">
-      <DependentUpon>.cs</DependentUpon>
+    <EmbeddedResource Include="fsuachua.resx">
+      <DependentUpon>fsuachua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fthietbi.resx">
+      <DependentUpon>fthietbi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

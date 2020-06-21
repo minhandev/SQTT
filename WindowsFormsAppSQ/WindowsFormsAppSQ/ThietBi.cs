@@ -17,7 +17,6 @@ namespace WindowsFormsAppSQ
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ThietBi()
         {
-            this.PhanLoais = new HashSet<PhanLoai>();
             this.SuaChuas = new HashSet<SuaChua>();
             this.ThuHois = new HashSet<ThuHoi>();
         }
@@ -35,8 +34,6 @@ namespace WindowsFormsAppSQ
         public virtual LinhKien LinhKien { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual NhomThietBi NhomThietBi { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhanLoai> PhanLoais { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SuaChua> SuaChuas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

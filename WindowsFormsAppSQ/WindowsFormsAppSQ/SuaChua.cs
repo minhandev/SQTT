@@ -24,7 +24,6 @@ namespace WindowsFormsAppSQ
         public string GhiChu { get; set; }
     
         public virtual LoaiSuaChua LoaiSuaChua { get; set; }
-        public virtual PhanLoai PhanLoai { get; set; }
         public virtual ThietBi ThietBi { get; set; }
     }
 }

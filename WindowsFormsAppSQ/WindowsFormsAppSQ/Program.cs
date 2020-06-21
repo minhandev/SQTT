@@ -13,7 +13,7 @@ namespace WindowsFormsAppSQ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new floaisuachua());
+            Application.Run(new fsuachua());
         }
     }
 }

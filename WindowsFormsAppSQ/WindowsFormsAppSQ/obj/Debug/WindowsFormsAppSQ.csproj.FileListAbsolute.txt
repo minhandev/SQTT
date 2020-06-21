@@ -25,7 +25,6 @@ C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\bin\Debug\En
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.csprojAssemblyReference.cache
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fLogin.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fMain.resources
-C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fQuanly.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.Properties.Resources.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.csproj.GenerateResource.cache
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.csproj.CoreCompileInputs.cache
@@ -37,3 +36,7 @@ C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\Wi
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fnhomthietbi.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fnhacungcap.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.floaisuachua.resources
+C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fdonvitinh.resources
+C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.flinhkien.resources
+C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fthietbi.resources
+C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fsuachua.resources

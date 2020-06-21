@@ -33,7 +33,6 @@ namespace WindowsFormsAppSQ
         public virtual DbSet<NguoiPhuTrach> NguoiPhuTraches { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhomThietBi> NhomThietBis { get; set; }
-        public virtual DbSet<PhanLoai> PhanLoais { get; set; }
         public virtual DbSet<SuaChua> SuaChuas { get; set; }
         public virtual DbSet<ThietBi> ThietBis { get; set; }
         public virtual DbSet<ThuHoi> ThuHois { get; set; }
