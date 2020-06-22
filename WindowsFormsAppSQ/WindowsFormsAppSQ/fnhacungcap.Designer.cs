@@ -32,14 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fnhacungcap));
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtm = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txts = new System.Windows.Forms.TextBox();
             this.txtd = new System.Windows.Forms.TextBox();
+            this.txts = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtm = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btlThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripSeparator();
             this.btlXoa = new System.Windows.Forms.ToolStripButton();
@@ -87,48 +87,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
-            // label1
+            // txtd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã nhà cc :";
+            this.txtd.Location = new System.Drawing.Point(540, 34);
+            this.txtd.MaxLength = 10;
+            this.txtd.Name = "txtd";
+            this.txtd.Size = new System.Drawing.Size(229, 20);
+            this.txtd.TabIndex = 17;
             // 
-            // txtm
+            // txts
             // 
-            this.txtm.Location = new System.Drawing.Point(122, 35);
-            this.txtm.MaxLength = 30;
-            this.txtm.Name = "txtm";
-            this.txtm.Size = new System.Drawing.Size(231, 20);
-            this.txtm.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tên nhà cc :";
-            // 
-            // txtt
-            // 
-            this.txtt.Location = new System.Drawing.Point(122, 61);
-            this.txtt.MaxLength = 30;
-            this.txtt.Name = "txtt";
-            this.txtt.Size = new System.Drawing.Size(231, 20);
-            this.txtt.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(481, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Địa điểm  :";
+            this.txts.Location = new System.Drawing.Point(540, 61);
+            this.txts.MaxLength = 10;
+            this.txts.Name = "txts";
+            this.txts.Size = new System.Drawing.Size(229, 20);
+            this.txts.TabIndex = 15;
             // 
             // label4
             // 
@@ -139,21 +112,48 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Số điện thoại  :";
             // 
-            // txts
+            // label3
             // 
-            this.txts.Location = new System.Drawing.Point(540, 61);
-            this.txts.MaxLength = 10;
-            this.txts.Name = "txts";
-            this.txts.Size = new System.Drawing.Size(229, 20);
-            this.txts.TabIndex = 15;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(481, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Địa điểm  :";
             // 
-            // txtd
+            // txtt
             // 
-            this.txtd.Location = new System.Drawing.Point(540, 34);
-            this.txtd.MaxLength = 10;
-            this.txtd.Name = "txtd";
-            this.txtd.Size = new System.Drawing.Size(229, 20);
-            this.txtd.TabIndex = 17;
+            this.txtt.Location = new System.Drawing.Point(122, 61);
+            this.txtt.MaxLength = 30;
+            this.txtt.Name = "txtt";
+            this.txtt.Size = new System.Drawing.Size(231, 20);
+            this.txtt.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Tên nhà cc :";
+            // 
+            // txtm
+            // 
+            this.txtm.Location = new System.Drawing.Point(122, 35);
+            this.txtm.MaxLength = 30;
+            this.txtm.Name = "txtm";
+            this.txtm.Size = new System.Drawing.Size(231, 20);
+            this.txtm.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(59, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã nhà cc :";
             // 
             // btlThem
             // 
@@ -287,6 +287,7 @@
             this.Name = "fnhacungcap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NHÀ CUNG CẤP";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fnhacungcap_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

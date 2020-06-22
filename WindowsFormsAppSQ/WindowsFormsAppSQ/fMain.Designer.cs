@@ -34,8 +34,10 @@
             this.DanhXuatTool = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.NguoiDungTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.ThoatTool = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuanLyTool = new System.Windows.Forms.ToolStripMenuItem();
             this.TTBenhVienTool = new System.Windows.Forms.ToolStripMenuItem();
             this.TTGoiThauTool = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,16 +66,18 @@
             this.DonViStrip = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.QuanLyStrip = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.ThietBiStrip = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.NguoiPhuTrachStrip = new System.Windows.Forms.ToolStripButton();
-            this.NVKTStrip = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.TTBaoHanhStrip = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.TTBaoTriStrip = new System.Windows.Forms.ToolStripButton();
-            this.TTSuaChuaStrip = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.nhómThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.nhómSửaChữaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómThuHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómĐơnVịTínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuTool.SuspendLayout();
             this.ThanhChucNang.SuspendLayout();
             this.SuspendLayout();
@@ -114,39 +118,54 @@
             // 
             this.DanhXuatTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhXuatTool.Name = "DanhXuatTool";
-            this.DanhXuatTool.Size = new System.Drawing.Size(180, 22);
+            this.DanhXuatTool.Size = new System.Drawing.Size(173, 22);
             this.DanhXuatTool.Text = "Đăng Xuất";
             this.DanhXuatTool.Click += new System.EventHandler(this.DanhXuatTool_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(170, 6);
             // 
             // NguoiDungTool
             // 
             this.NguoiDungTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NguoiDungTool.Name = "NguoiDungTool";
-            this.NguoiDungTool.Size = new System.Drawing.Size(180, 22);
+            this.NguoiDungTool.Size = new System.Drawing.Size(173, 22);
             this.NguoiDungTool.Text = "Quản Lý Người Dùng";
             this.NguoiDungTool.Click += new System.EventHandler(this.NguoiDungTool_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(170, 6);
             // 
             // ThoatTool
             // 
             this.ThoatTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThoatTool.Name = "ThoatTool";
-            this.ThoatTool.Size = new System.Drawing.Size(180, 22);
+            this.ThoatTool.Size = new System.Drawing.Size(173, 22);
             this.ThoatTool.Text = "Thoát";
             this.ThoatTool.Click += new System.EventHandler(this.ThoatTool_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nhómThiếtBịToolStripMenuItem});
+            this.nhómThiếtBịToolStripMenuItem,
+            this.nhómSửaChữaToolStripMenuItem,
+            this.nhómThuHồiToolStripMenuItem,
+            this.nhómĐơnVịTínhToolStripMenuItem});
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Blue;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 20);
             this.toolStripMenuItem1.Text = "Hiển Thị";
+            // 
+            // nhómThiếtBịToolStripMenuItem
+            // 
+            this.nhómThiếtBịToolStripMenuItem.Name = "nhómThiếtBịToolStripMenuItem";
+            this.nhómThiếtBịToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhómThiếtBịToolStripMenuItem.Text = "Nhóm thiết bị";
+            this.nhómThiếtBịToolStripMenuItem.Click += new System.EventHandler(this.nhómThiếtBịToolStripMenuItem_Click);
             // 
             // QuanLyTool
             // 
@@ -171,73 +190,73 @@
             // 
             this.TTBenhVienTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TTBenhVienTool.Name = "TTBenhVienTool";
-            this.TTBenhVienTool.Size = new System.Drawing.Size(180, 22);
+            this.TTBenhVienTool.Size = new System.Drawing.Size(170, 22);
             this.TTBenhVienTool.Text = "Thông tin Bệnh Viện";
             // 
             // TTGoiThauTool
             // 
             this.TTGoiThauTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TTGoiThauTool.Name = "TTGoiThauTool";
-            this.TTGoiThauTool.Size = new System.Drawing.Size(180, 22);
+            this.TTGoiThauTool.Size = new System.Drawing.Size(170, 22);
             this.TTGoiThauTool.Text = "Thông tin Gói Thầu";
             // 
             // TTHopDongTool
             // 
             this.TTHopDongTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TTHopDongTool.Name = "TTHopDongTool";
-            this.TTHopDongTool.Size = new System.Drawing.Size(180, 22);
+            this.TTHopDongTool.Size = new System.Drawing.Size(170, 22);
             this.TTHopDongTool.Text = "Thông tin Hợp Đồng";
             // 
             // TTThietBiTool
             // 
             this.TTThietBiTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TTThietBiTool.Name = "TTThietBiTool";
-            this.TTThietBiTool.Size = new System.Drawing.Size(180, 22);
+            this.TTThietBiTool.Size = new System.Drawing.Size(170, 22);
             this.TTThietBiTool.Text = "Thông tin Thiết Bị";
             // 
             // TTLinhKienTool
             // 
             this.TTLinhKienTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TTLinhKienTool.Name = "TTLinhKienTool";
-            this.TTLinhKienTool.Size = new System.Drawing.Size(180, 22);
+            this.TTLinhKienTool.Size = new System.Drawing.Size(170, 22);
             this.TTLinhKienTool.Text = "Thông tin Linh Kiện";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
             // 
             // TTNguoiPhuTrachTool
             // 
             this.TTNguoiPhuTrachTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TTNguoiPhuTrachTool.Name = "TTNguoiPhuTrachTool";
-            this.TTNguoiPhuTrachTool.Size = new System.Drawing.Size(180, 22);
+            this.TTNguoiPhuTrachTool.Size = new System.Drawing.Size(170, 22);
             this.TTNguoiPhuTrachTool.Text = "Người Phụ Trách";
             // 
             // TTNVKTTool
             // 
             this.TTNVKTTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TTNVKTTool.Name = "TTNVKTTool";
-            this.TTNVKTTool.Size = new System.Drawing.Size(180, 22);
+            this.TTNVKTTool.Size = new System.Drawing.Size(170, 22);
             this.TTNVKTTool.Text = "Nhân Viên Kỹ Thuật";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(167, 6);
             // 
             // DVTTool
             // 
             this.DVTTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DVTTool.Name = "DVTTool";
-            this.DVTTool.Size = new System.Drawing.Size(180, 22);
+            this.DVTTool.Size = new System.Drawing.Size(170, 22);
             this.DVTTool.Text = "Đơn Vị Tính";
             // 
             // TinhTrangTool
             // 
             this.TinhTrangTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TinhTrangTool.Name = "TinhTrangTool";
-            this.TinhTrangTool.Size = new System.Drawing.Size(180, 22);
+            this.TinhTrangTool.Size = new System.Drawing.Size(170, 22);
             this.TinhTrangTool.Text = "Tình Trạng";
             // 
             // ThongKeTool
@@ -343,14 +362,15 @@
             this.DonViStrip,
             this.toolStripSeparator3,
             this.QuanLyStrip,
+            this.toolStripSeparator6,
             this.ThietBiStrip,
+            this.toolStripSeparator7,
             this.NguoiPhuTrachStrip,
-            this.NVKTStrip,
             this.toolStripSeparator5,
             this.TTBaoHanhStrip,
+            this.toolStripSeparator10,
             this.TTBaoTriStrip,
-            this.TTSuaChuaStrip,
-            this.toolStripSeparator6});
+            this.toolStripSeparator4});
             this.ThanhChucNang.Location = new System.Drawing.Point(0, 24);
             this.ThanhChucNang.Name = "ThanhChucNang";
             this.ThanhChucNang.Size = new System.Drawing.Size(800, 45);
@@ -383,10 +403,15 @@
             this.QuanLyStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.QuanLyStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.QuanLyStrip.Name = "QuanLyStrip";
-            this.QuanLyStrip.Size = new System.Drawing.Size(58, 42);
-            this.QuanLyStrip.Text = "QUẢN LÝ";
+            this.QuanLyStrip.Size = new System.Drawing.Size(116, 42);
+            this.QuanLyStrip.Text = "NGƯỜI PHỤ TRÁCH";
             this.QuanLyStrip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.QuanLyStrip.Click += new System.EventHandler(this.QuanLyStrip_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 45);
             // 
             // ThietBiStrip
             // 
@@ -396,10 +421,15 @@
             this.ThietBiStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ThietBiStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ThietBiStrip.Name = "ThietBiStrip";
-            this.ThietBiStrip.Size = new System.Drawing.Size(53, 42);
-            this.ThietBiStrip.Text = "Thiết Bị";
+            this.ThietBiStrip.Size = new System.Drawing.Size(59, 42);
+            this.ThietBiStrip.Text = "THIẾT BỊ";
             this.ThietBiStrip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ThietBiStrip.Click += new System.EventHandler(this.ThietBiStrip_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 45);
             // 
             // NguoiPhuTrachStrip
             // 
@@ -409,23 +439,10 @@
             this.NguoiPhuTrachStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.NguoiPhuTrachStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.NguoiPhuTrachStrip.Name = "NguoiPhuTrachStrip";
-            this.NguoiPhuTrachStrip.Size = new System.Drawing.Size(102, 42);
-            this.NguoiPhuTrachStrip.Text = "Người Phụ Trách";
+            this.NguoiPhuTrachStrip.Size = new System.Drawing.Size(92, 42);
+            this.NguoiPhuTrachStrip.Text = "NHÀ CUNG CẤP";
             this.NguoiPhuTrachStrip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.NguoiPhuTrachStrip.Click += new System.EventHandler(this.NguoiPhuTrachStrip_Click);
-            // 
-            // NVKTStrip
-            // 
-            this.NVKTStrip.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.NVKTStrip.ForeColor = System.Drawing.Color.Blue;
-            this.NVKTStrip.Image = ((System.Drawing.Image)(resources.GetObject("NVKTStrip.Image")));
-            this.NVKTStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.NVKTStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NVKTStrip.Name = "NVKTStrip";
-            this.NVKTStrip.Size = new System.Drawing.Size(78, 42);
-            this.NVKTStrip.Text = "NV Kỹ Thuật";
-            this.NVKTStrip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NVKTStrip.Click += new System.EventHandler(this.NVKTStrip_Click);
             // 
             // toolStripSeparator5
             // 
@@ -440,9 +457,15 @@
             this.TTBaoHanhStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TTBaoHanhStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TTBaoHanhStrip.Name = "TTBaoHanhStrip";
-            this.TTBaoHanhStrip.Size = new System.Drawing.Size(67, 42);
-            this.TTBaoHanhStrip.Text = "TT B.Hành";
+            this.TTBaoHanhStrip.Size = new System.Drawing.Size(87, 42);
+            this.TTBaoHanhStrip.Text = "TT SỬA CHỮA";
             this.TTBaoHanhStrip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TTBaoHanhStrip.Click += new System.EventHandler(this.TTBaoHanhStrip_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 45);
             // 
             // TTBaoTriStrip
             // 
@@ -452,40 +475,38 @@
             this.TTBaoTriStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TTBaoTriStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TTBaoTriStrip.Name = "TTBaoTriStrip";
-            this.TTBaoTriStrip.Size = new System.Drawing.Size(53, 42);
-            this.TTBaoTriStrip.Text = "TT B.Trì";
+            this.TTBaoTriStrip.Size = new System.Drawing.Size(75, 42);
+            this.TTBaoTriStrip.Text = "TT THU HỒI";
             this.TTBaoTriStrip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TTBaoTriStrip.Click += new System.EventHandler(this.TTBaoTriStrip_Click);
             // 
-            // TTSuaChuaStrip
+            // toolStripSeparator4
             // 
-            this.TTSuaChuaStrip.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.TTSuaChuaStrip.ForeColor = System.Drawing.Color.Blue;
-            this.TTSuaChuaStrip.Image = ((System.Drawing.Image)(resources.GetObject("TTSuaChuaStrip.Image")));
-            this.TTSuaChuaStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.TTSuaChuaStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TTSuaChuaStrip.Name = "TTSuaChuaStrip";
-            this.TTSuaChuaStrip.Size = new System.Drawing.Size(67, 42);
-            this.TTSuaChuaStrip.Text = "TT S.Chữa";
-            this.TTSuaChuaStrip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 45);
             // 
-            // toolStripSeparator6
+            // nhómSửaChữaToolStripMenuItem
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 45);
+            this.nhómSửaChữaToolStripMenuItem.Name = "nhómSửaChữaToolStripMenuItem";
+            this.nhómSửaChữaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhómSửaChữaToolStripMenuItem.Text = "Nhóm sửa chữa";
+            this.nhómSửaChữaToolStripMenuItem.Click += new System.EventHandler(this.nhómSửaChữaToolStripMenuItem_Click);
             // 
-            // nhómThiếtBịToolStripMenuItem
+            // nhómThuHồiToolStripMenuItem
             // 
-            this.nhómThiếtBịToolStripMenuItem.Name = "nhómThiếtBịToolStripMenuItem";
-            this.nhómThiếtBịToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nhómThiếtBịToolStripMenuItem.Text = "Nhóm thiết bị";
-            this.nhómThiếtBịToolStripMenuItem.Click += new System.EventHandler(this.nhómThiếtBịToolStripMenuItem_Click);
+            this.nhómThuHồiToolStripMenuItem.Name = "nhómThuHồiToolStripMenuItem";
+            this.nhómThuHồiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhómThuHồiToolStripMenuItem.Text = "Nhóm thu hồi";
+            this.nhómThuHồiToolStripMenuItem.Click += new System.EventHandler(this.nhómThuHồiToolStripMenuItem_Click);
             // 
-            // toolStripSeparator9
+            // nhómĐơnVịTínhToolStripMenuItem
             // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
+            this.nhómĐơnVịTínhToolStripMenuItem.Name = "nhómĐơnVịTínhToolStripMenuItem";
+            this.nhómĐơnVịTínhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhómĐơnVịTínhToolStripMenuItem.Text = "Nhóm đơn vị tính";
+            this.nhómĐơnVịTínhToolStripMenuItem.Click += new System.EventHandler(this.nhómĐơnVịTínhToolStripMenuItem_Click);
             // 
-            // fMain
+            // fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -494,7 +515,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ThanhChucNang);
             this.Controls.Add(this.MenuTool);
-            this.Name = "fMain";
+            this.Name = "fmain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ TRANG THIẾT BỊ TRƯỜNG SQTT";
             this.MenuTool.ResumeLayout(false);
@@ -545,13 +566,17 @@
         private System.Windows.Forms.ToolStripButton QuanLyStrip;
         private System.Windows.Forms.ToolStripButton ThietBiStrip;
         private System.Windows.Forms.ToolStripButton NguoiPhuTrachStrip;
-        private System.Windows.Forms.ToolStripButton NVKTStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton TTBaoHanhStrip;
         private System.Windows.Forms.ToolStripButton TTBaoTriStrip;
-        private System.Windows.Forms.ToolStripButton TTSuaChuaStrip;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem nhómThiếtBịToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem nhómSửaChữaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhómThuHồiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhómĐơnVịTínhToolStripMenuItem;
     }
 }

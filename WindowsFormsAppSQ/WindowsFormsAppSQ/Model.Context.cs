@@ -27,7 +27,6 @@ namespace WindowsFormsAppSQ
     
         public virtual DbSet<DonVi> DonVis { get; set; }
         public virtual DbSet<DonViTinh> DonViTinhs { get; set; }
-        public virtual DbSet<LinhKien> LinhKiens { get; set; }
         public virtual DbSet<LoaiSuaChua> LoaiSuaChuas { get; set; }
         public virtual DbSet<LoaiThuHoi> LoaiThuHois { get; set; }
         public virtual DbSet<NguoiPhuTrach> NguoiPhuTraches { get; set; }

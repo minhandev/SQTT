@@ -288,6 +288,7 @@
             this.Name = "fnphutrach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NGƯỜI PHỤ TRÁCH";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fnphutrach_FormClosed);
             this.Load += new System.EventHandler(this.fnphutrach_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

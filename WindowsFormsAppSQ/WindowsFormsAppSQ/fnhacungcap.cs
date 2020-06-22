@@ -104,5 +104,12 @@ namespace WindowsFormsAppSQ
         {
             txtm.Enabled = false;
         }
+
+        private void fnhacungcap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fmain f = new fmain();
+            f.Show();
+            this.Hide();
+        }
     }
 }

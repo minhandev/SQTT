@@ -17,20 +17,7 @@
     </Key>
     <Property Name="MaDVT" Type="Int32" Nullable="false" />
     <Property Name="TenDVT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="LinhKiens" Relationship="Self.FK_LinhKien_DonViTinh" FromRole="DonViTinh" ToRole="LinhKien" />
     <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_DonViTinh" FromRole="DonViTinh" ToRole="ThietBi" />
-  </EntityType>
-  <EntityType Name="LinhKien">
-    <Key>
-      <PropertyRef Name="MaLK" />
-    </Key>
-    <Property Name="MaLK" Type="Int32" Nullable="false" />
-    <Property Name="TenLK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="NamSX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="MaTB" Type="Int32" Nullable="false" />
-    <Property Name="MaDVT" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="DonViTinh" Relationship="Self.FK_LinhKien_DonViTinh" FromRole="LinhKien" ToRole="DonViTinh" />
-    <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_LinhKien" FromRole="LinhKien" ToRole="ThietBi" />
   </EntityType>
   <EntityType Name="LoaiSuaChua">
     <Key>
@@ -87,7 +74,6 @@
     <Property Name="MaLSC" Type="Int32" Nullable="false" />
     <Property Name="thoigian" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="MaTB" Type="Int32" Nullable="false" />
-    <Property Name="MaPL" Type="Int32" Nullable="false" />
     <Property Name="MaSC" Type="Int32" Nullable="false" />
     <Property Name="ChatLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -105,10 +91,9 @@
     <Property Name="MaNhom" Type="Int32" Nullable="false" />
     <Property Name="MaDV" Type="Int32" Nullable="false" />
     <Property Name="SoLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="MaLK" Type="Int32" Nullable="false" />
+    <Property Name="MaDVT" Type="Int32" />
     <NavigationProperty Name="DonVi" Relationship="Self.FK_ThietBi_DonVi" FromRole="ThietBi" ToRole="DonVi" />
     <NavigationProperty Name="DonViTinh" Relationship="Self.FK_ThietBi_DonViTinh" FromRole="ThietBi" ToRole="DonViTinh" />
-    <NavigationProperty Name="LinhKien" Relationship="Self.FK_ThietBi_LinhKien" FromRole="ThietBi" ToRole="LinhKien" />
     <NavigationProperty Name="NhaCungCap" Relationship="Self.FK_ThietBi_NhaCungCap" FromRole="ThietBi" ToRole="NhaCungCap" />
     <NavigationProperty Name="NhomThietBi" Relationship="Self.FK_ThietBi_NhomThietBi" FromRole="ThietBi" ToRole="NhomThietBi" />
     <NavigationProperty Name="SuaChuas" Relationship="Self.FK_SuaChua_ThietBi" FromRole="ThietBi" ToRole="SuaChua" />
@@ -159,39 +144,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_LinhKien_DonViTinh">
-    <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
-    <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DonViTinh">
-        <PropertyRef Name="MaDVT" />
-      </Principal>
-      <Dependent Role="LinhKien">
-        <PropertyRef Name="MaDVT" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ThietBi_DonViTinh">
-    <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
+    <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="0..1" />
     <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DonViTinh">
         <PropertyRef Name="MaDVT" />
       </Principal>
       <Dependent Role="ThietBi">
-        <PropertyRef Name="MaDV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ThietBi_LinhKien">
-    <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="1" />
-    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LinhKien">
-        <PropertyRef Name="MaLK" />
-      </Principal>
-      <Dependent Role="ThietBi">
-        <PropertyRef Name="MaLK" />
+        <PropertyRef Name="MaDVT" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -270,7 +231,6 @@
   <EntityContainer Name="SQTTEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="DonVis" EntityType="Self.DonVi" />
     <EntitySet Name="DonViTinhs" EntityType="Self.DonViTinh" />
-    <EntitySet Name="LinhKiens" EntityType="Self.LinhKien" />
     <EntitySet Name="LoaiSuaChuas" EntityType="Self.LoaiSuaChua" />
     <EntitySet Name="LoaiThuHois" EntityType="Self.LoaiThuHoi" />
     <EntitySet Name="NguoiPhuTraches" EntityType="Self.NguoiPhuTrach" />
@@ -288,16 +248,8 @@
       <End Role="DonVi" EntitySet="DonVis" />
       <End Role="ThietBi" EntitySet="ThietBis" />
     </AssociationSet>
-    <AssociationSet Name="FK_LinhKien_DonViTinh" Association="Self.FK_LinhKien_DonViTinh">
-      <End Role="DonViTinh" EntitySet="DonViTinhs" />
-      <End Role="LinhKien" EntitySet="LinhKiens" />
-    </AssociationSet>
     <AssociationSet Name="FK_ThietBi_DonViTinh" Association="Self.FK_ThietBi_DonViTinh">
       <End Role="DonViTinh" EntitySet="DonViTinhs" />
-      <End Role="ThietBi" EntitySet="ThietBis" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ThietBi_LinhKien" Association="Self.FK_ThietBi_LinhKien">
-      <End Role="LinhKien" EntitySet="LinhKiens" />
       <End Role="ThietBi" EntitySet="ThietBis" />
     </AssociationSet>
     <AssociationSet Name="FK_SuaChua_LoaiSuaChua" Association="Self.FK_SuaChua_LoaiSuaChua">

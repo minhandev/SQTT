@@ -17,7 +17,6 @@ namespace WindowsFormsAppSQ
         public int MaLSC { get; set; }
         public System.DateTime thoigian { get; set; }
         public int MaTB { get; set; }
-        public int MaPL { get; set; }
         public int MaSC { get; set; }
         public string ChatLuong { get; set; }
         public string TinhTrang { get; set; }

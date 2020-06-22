@@ -119,5 +119,12 @@ namespace WindowsFormsAppSQ
         {
             txtmpt.Enabled = false;
         }
+
+        private void fnphutrach_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fmain f = new fmain();
+            f.Show();
+            this.Hide();
+        }
     }
 }

@@ -27,11 +27,10 @@ namespace WindowsFormsAppSQ
         public int MaNhom { get; set; }
         public int MaDV { get; set; }
         public string SoLuong { get; set; }
-        public int MaLK { get; set; }
+        public Nullable<int> MaDVT { get; set; }
     
         public virtual DonVi DonVi { get; set; }
         public virtual DonViTinh DonViTinh { get; set; }
-        public virtual LinhKien LinhKien { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual NhomThietBi NhomThietBi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

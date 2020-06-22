@@ -38,6 +38,7 @@ namespace WindowsFormsAppSQ
             txtg.Text = " ";
             txtt.Text = " ";
             txtg.Text = " ";
+            txtm.Text = " ";
         }
 
         private void btlXoa_Click(object sender, EventArgs e)

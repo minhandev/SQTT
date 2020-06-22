@@ -76,17 +76,23 @@
     <Compile Include="fdonvitinh.Designer.cs">
       <DependentUpon>fdonvitinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="flinhkien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="flinhkien.Designer.cs">
-      <DependentUpon>flinhkien.cs</DependentUpon>
-    </Compile>
     <Compile Include="floaisuachua.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="floaisuachua.Designer.cs">
       <DependentUpon>floaisuachua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="floaithuhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="floaithuhoi.Designer.cs">
+      <DependentUpon>floaithuhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fthuhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fthuhoi.Designer.cs">
+      <DependentUpon>fthuhoi.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -129,9 +135,6 @@
     </Compile>
     <Compile Include="fthietbi.Designer.cs">
       <DependentUpon>fthietbi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LinhKien.cs">
-      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiSuaChua.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -183,11 +186,14 @@
     <EmbeddedResource Include="fdonvitinh.resx">
       <DependentUpon>fdonvitinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="flinhkien.resx">
-      <DependentUpon>flinhkien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="floaisuachua.resx">
       <DependentUpon>floaisuachua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="floaithuhoi.resx">
+      <DependentUpon>floaithuhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fthuhoi.resx">
+      <DependentUpon>fthuhoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>

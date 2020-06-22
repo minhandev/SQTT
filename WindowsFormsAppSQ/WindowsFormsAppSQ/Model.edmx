@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="quanlytrangthietbiSQTTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="quanlytrangthietbiSQTTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DonVi">
           <Key>
             <PropertyRef Name="MaDV" />
@@ -20,16 +20,6 @@
           </Key>
           <Property Name="MaDVT" Type="int" Nullable="false" />
           <Property Name="TenDVT" Type="varchar" MaxLength="50" Nullable="false" />
-        </EntityType>
-        <EntityType Name="LinhKien">
-          <Key>
-            <PropertyRef Name="MaLK" />
-          </Key>
-          <Property Name="MaLK" Type="int" Nullable="false" />
-          <Property Name="TenLK" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="NamSX" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="MaTB" Type="int" Nullable="false" />
-          <Property Name="MaDVT" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="LoaiSuaChua">
           <Key>
@@ -91,7 +81,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
           <Property Name="MaLSC" Type="int" Nullable="false" />
           <Property Name="thoigian" Type="date" Nullable="false" />
           <Property Name="MaTB" Type="int" Nullable="false" />
-          <Property Name="MaPL" Type="int" Nullable="false" />
           <Property Name="MaSC" Type="int" Nullable="false" />
           <Property Name="ChatLuong" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -107,7 +96,7 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
           <Property Name="MaNhom" Type="int" Nullable="false" />
           <Property Name="MaDV" Type="int" Nullable="false" />
           <Property Name="SoLuong" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="MaLK" Type="int" Nullable="false" />
+          <Property Name="MaDVT" Type="int" />
         </EntityType>
         <EntityType Name="ThuHoi">
           <Key>
@@ -120,18 +109,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
           <Property Name="Thoigian" Type="datetime" Nullable="false" />
           <Property Name="MaTH" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_LinhKien_DonViTinh1">
-          <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
-          <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="DonViTinh">
-              <PropertyRef Name="MaDVT" />
-            </Principal>
-            <Dependent Role="LinhKien">
-              <PropertyRef Name="MaDVT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_NguoiPhuTrach_DonVi">
           <End Role="DonVi" Type="Self.DonVi" Multiplicity="1" />
           <End Role="NguoiPhuTrach" Type="Self.NguoiPhuTrach" Multiplicity="*" />
@@ -181,26 +158,14 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ThietBi_DonViTinh">
-          <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
+          <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="0..1" />
           <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DonViTinh">
               <PropertyRef Name="MaDVT" />
             </Principal>
             <Dependent Role="ThietBi">
-              <PropertyRef Name="MaDV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ThietBi_LinhKien1">
-          <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="1" />
-          <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LinhKien">
-              <PropertyRef Name="MaLK" />
-            </Principal>
-            <Dependent Role="ThietBi">
-              <PropertyRef Name="MaLK" />
+              <PropertyRef Name="MaDVT" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -255,7 +220,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
         <EntityContainer Name="quanlytrangthietbiSQTTModelStoreContainer">
           <EntitySet Name="DonVi" EntityType="Self.DonVi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DonViTinh" EntityType="Self.DonViTinh" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LinhKien" EntityType="Self.LinhKien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiSuaChua" EntityType="Self.LoaiSuaChua" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiThuHoi" EntityType="Self.LoaiThuHoi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NguoiPhuTrach" EntityType="Self.NguoiPhuTrach" Schema="dbo" store:Type="Tables" />
@@ -271,10 +235,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
     [NguoiDung].[Matkhau] AS [Matkhau]
     FROM [dbo].[NguoiDung] AS [NguoiDung]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK_LinhKien_DonViTinh1" Association="Self.FK_LinhKien_DonViTinh1">
-            <End Role="DonViTinh" EntitySet="DonViTinh" />
-            <End Role="LinhKien" EntitySet="LinhKien" />
-          </AssociationSet>
           <AssociationSet Name="FK_NguoiPhuTrach_DonVi" Association="Self.FK_NguoiPhuTrach_DonVi">
             <End Role="DonVi" EntitySet="DonVi" />
             <End Role="NguoiPhuTrach" EntitySet="NguoiPhuTrach" />
@@ -295,10 +255,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
             <End Role="DonViTinh" EntitySet="DonViTinh" />
             <End Role="ThietBi" EntitySet="ThietBi" />
           </AssociationSet>
-          <AssociationSet Name="FK_ThietBi_LinhKien1" Association="Self.FK_ThietBi_LinhKien1">
-            <End Role="LinhKien" EntitySet="LinhKien" />
-            <End Role="ThietBi" EntitySet="ThietBi" />
-          </AssociationSet>
           <AssociationSet Name="FK_ThietBi_NhaCungCap" Association="Self.FK_ThietBi_NhaCungCap">
             <End Role="NhaCungCap" EntitySet="NhaCungCap" />
             <End Role="ThietBi" EntitySet="ThietBi" />
@@ -316,7 +272,8 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
             <End Role="ThuHoi" EntitySet="ThuHoi" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="quanlytrangthietbiSQTTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -337,20 +294,7 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
           </Key>
           <Property Name="MaDVT" Type="Int32" Nullable="false" />
           <Property Name="TenDVT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="LinhKiens" Relationship="Self.FK_LinhKien_DonViTinh" FromRole="DonViTinh" ToRole="LinhKien" />
           <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_DonViTinh" FromRole="DonViTinh" ToRole="ThietBi" />
-        </EntityType>
-        <EntityType Name="LinhKien">
-          <Key>
-            <PropertyRef Name="MaLK" />
-          </Key>
-          <Property Name="MaLK" Type="Int32" Nullable="false" />
-          <Property Name="TenLK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="NamSX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaTB" Type="Int32" Nullable="false" />
-          <Property Name="MaDVT" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DonViTinh" Relationship="Self.FK_LinhKien_DonViTinh" FromRole="LinhKien" ToRole="DonViTinh" />
-          <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_LinhKien" FromRole="LinhKien" ToRole="ThietBi" />
         </EntityType>
         <EntityType Name="LoaiSuaChua">
           <Key>
@@ -407,7 +351,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
           <Property Name="MaLSC" Type="Int32" Nullable="false" />
           <Property Name="thoigian" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="MaTB" Type="Int32" Nullable="false" />
-          <Property Name="MaPL" Type="Int32" Nullable="false" />
           <Property Name="MaSC" Type="Int32" Nullable="false" />
           <Property Name="ChatLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -425,10 +368,9 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
           <Property Name="MaNhom" Type="Int32" Nullable="false" />
           <Property Name="MaDV" Type="Int32" Nullable="false" />
           <Property Name="SoLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaLK" Type="Int32" Nullable="false" />
+          <Property Name="MaDVT" Type="Int32" />
           <NavigationProperty Name="DonVi" Relationship="Self.FK_ThietBi_DonVi" FromRole="ThietBi" ToRole="DonVi" />
           <NavigationProperty Name="DonViTinh" Relationship="Self.FK_ThietBi_DonViTinh" FromRole="ThietBi" ToRole="DonViTinh" />
-          <NavigationProperty Name="LinhKien" Relationship="Self.FK_ThietBi_LinhKien" FromRole="ThietBi" ToRole="LinhKien" />
           <NavigationProperty Name="NhaCungCap" Relationship="Self.FK_ThietBi_NhaCungCap" FromRole="ThietBi" ToRole="NhaCungCap" />
           <NavigationProperty Name="NhomThietBi" Relationship="Self.FK_ThietBi_NhomThietBi" FromRole="ThietBi" ToRole="NhomThietBi" />
           <NavigationProperty Name="SuaChuas" Relationship="Self.FK_SuaChua_ThietBi" FromRole="ThietBi" ToRole="SuaChua" />
@@ -479,39 +421,15 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LinhKien_DonViTinh">
-          <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
-          <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="DonViTinh">
-              <PropertyRef Name="MaDVT" />
-            </Principal>
-            <Dependent Role="LinhKien">
-              <PropertyRef Name="MaDVT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ThietBi_DonViTinh">
-          <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="1" />
+          <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="0..1" />
           <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DonViTinh">
               <PropertyRef Name="MaDVT" />
             </Principal>
             <Dependent Role="ThietBi">
-              <PropertyRef Name="MaDV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ThietBi_LinhKien">
-          <End Role="LinhKien" Type="Self.LinhKien" Multiplicity="1" />
-          <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LinhKien">
-              <PropertyRef Name="MaLK" />
-            </Principal>
-            <Dependent Role="ThietBi">
-              <PropertyRef Name="MaLK" />
+              <PropertyRef Name="MaDVT" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -590,7 +508,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
         <EntityContainer Name="SQTTEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DonVis" EntityType="Self.DonVi" />
           <EntitySet Name="DonViTinhs" EntityType="Self.DonViTinh" />
-          <EntitySet Name="LinhKiens" EntityType="Self.LinhKien" />
           <EntitySet Name="LoaiSuaChuas" EntityType="Self.LoaiSuaChua" />
           <EntitySet Name="LoaiThuHois" EntityType="Self.LoaiThuHoi" />
           <EntitySet Name="NguoiPhuTraches" EntityType="Self.NguoiPhuTrach" />
@@ -608,16 +525,8 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
             <End Role="DonVi" EntitySet="DonVis" />
             <End Role="ThietBi" EntitySet="ThietBis" />
           </AssociationSet>
-          <AssociationSet Name="FK_LinhKien_DonViTinh" Association="Self.FK_LinhKien_DonViTinh">
-            <End Role="DonViTinh" EntitySet="DonViTinhs" />
-            <End Role="LinhKien" EntitySet="LinhKiens" />
-          </AssociationSet>
           <AssociationSet Name="FK_ThietBi_DonViTinh" Association="Self.FK_ThietBi_DonViTinh">
             <End Role="DonViTinh" EntitySet="DonViTinhs" />
-            <End Role="ThietBi" EntitySet="ThietBis" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ThietBi_LinhKien" Association="Self.FK_ThietBi_LinhKien">
-            <End Role="LinhKien" EntitySet="LinhKiens" />
             <End Role="ThietBi" EntitySet="ThietBis" />
           </AssociationSet>
           <AssociationSet Name="FK_SuaChua_LoaiSuaChua" Association="Self.FK_SuaChua_LoaiSuaChua">
@@ -666,17 +575,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
               <MappingFragment StoreEntitySet="DonViTinh">
                 <ScalarProperty Name="MaDVT" ColumnName="MaDVT" />
                 <ScalarProperty Name="TenDVT" ColumnName="TenDVT" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="LinhKiens">
-            <EntityTypeMapping TypeName="quanlytrangthietbiSQTTModel.LinhKien">
-              <MappingFragment StoreEntitySet="LinhKien">
-                <ScalarProperty Name="MaLK" ColumnName="MaLK" />
-                <ScalarProperty Name="TenLK" ColumnName="TenLK" />
-                <ScalarProperty Name="NamSX" ColumnName="NamSX" />
-                <ScalarProperty Name="MaTB" ColumnName="MaTB" />
-                <ScalarProperty Name="MaDVT" ColumnName="MaDVT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -734,7 +632,6 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
                 <ScalarProperty Name="MaLSC" ColumnName="MaLSC" />
                 <ScalarProperty Name="thoigian" ColumnName="thoigian" />
                 <ScalarProperty Name="MaTB" ColumnName="MaTB" />
-                <ScalarProperty Name="MaPL" ColumnName="MaPL" />
                 <ScalarProperty Name="MaSC" ColumnName="MaSC" />
                 <ScalarProperty Name="ChatLuong" ColumnName="ChatLuong" />
                 <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
@@ -751,7 +648,7 @@ warning 6002: The table/view 'quanlytrangthietbiSQTT.dbo.NguoiDung' does not hav
                 <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
                 <ScalarProperty Name="MaDV" ColumnName="MaDV" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="MaLK" ColumnName="MaLK" />
+                <ScalarProperty Name="MaDVT" ColumnName="MaDVT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

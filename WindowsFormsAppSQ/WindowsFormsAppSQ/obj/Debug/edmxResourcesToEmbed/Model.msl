@@ -19,17 +19,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LinhKiens">
-      <EntityTypeMapping TypeName="quanlytrangthietbiSQTTModel.LinhKien">
-        <MappingFragment StoreEntitySet="LinhKien">
-          <ScalarProperty Name="MaLK" ColumnName="MaLK" />
-          <ScalarProperty Name="TenLK" ColumnName="TenLK" />
-          <ScalarProperty Name="NamSX" ColumnName="NamSX" />
-          <ScalarProperty Name="MaTB" ColumnName="MaTB" />
-          <ScalarProperty Name="MaDVT" ColumnName="MaDVT" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="LoaiSuaChuas">
       <EntityTypeMapping TypeName="quanlytrangthietbiSQTTModel.LoaiSuaChua">
         <MappingFragment StoreEntitySet="LoaiSuaChua">
@@ -84,7 +73,6 @@
           <ScalarProperty Name="MaLSC" ColumnName="MaLSC" />
           <ScalarProperty Name="thoigian" ColumnName="thoigian" />
           <ScalarProperty Name="MaTB" ColumnName="MaTB" />
-          <ScalarProperty Name="MaPL" ColumnName="MaPL" />
           <ScalarProperty Name="MaSC" ColumnName="MaSC" />
           <ScalarProperty Name="ChatLuong" ColumnName="ChatLuong" />
           <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
@@ -101,7 +89,7 @@
           <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
           <ScalarProperty Name="MaDV" ColumnName="MaDV" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="MaLK" ColumnName="MaLK" />
+          <ScalarProperty Name="MaDVT" ColumnName="MaDVT" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

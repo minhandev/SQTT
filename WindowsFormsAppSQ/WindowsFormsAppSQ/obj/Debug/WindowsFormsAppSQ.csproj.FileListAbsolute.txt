@@ -37,6 +37,7 @@ C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\Wi
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fnhacungcap.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.floaisuachua.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fdonvitinh.resources
-C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.flinhkien.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fthietbi.resources
 C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fsuachua.resources
+C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.floaithuhoi.resources
+C:\Users\minhandev\Desktop\SQTT\WindowsFormsAppSQ\WindowsFormsAppSQ\obj\Debug\WindowsFormsAppSQ.fthuhoi.resources
