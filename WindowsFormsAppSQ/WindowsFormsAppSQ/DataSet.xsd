@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="quanlytrangthietbiSQTTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="quanlytrangthietbiSQTTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsAppSQ.Properties.Settings.GlobalReference.Default.quanlytrangthietbiSQTTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="quanlytrangthietbiSQTTConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        LoaiSuaChua.MaLSC, LoaiSuaChua.TenLoaiSuaChua, LoaiSuaChua.LKThay, NguoiDung.MaNd, NguoiDung.Taikhoan, NguoiDung.Matkhau, LoaiThuHoi.GhiChu, LoaiThuHoi.TenLoaiThuHoi, LoaiThuHoi.MaLTH, 
+                         NguoiPhuTrach.MaNguoiPhuTrach, NguoiPhuTrach.TenNguoiPhuTrach, NguoiPhuTrach.ThoiGian, NguoiPhuTrach.MaDV, NguoiPhuTrach.SDT, NhaCungCap.TenNhaCungCap, NhaCungCap.MaNCC, NhaCungCap.DiaChi, 
+                         NhaCungCap.SDT AS Expr1, ThietBi.TenThietBi, ThietBi.MaTB, ThietBi.MaNhom, ThietBi.MaNCC AS Expr2, ThietBi.MaDV AS Expr3, ThietBi.SoLuong, SuaChua.TinhTrang, SuaChua.GhiChu AS Expr4, SuaChua.ChatLuong, 
+                         SuaChua.MaSC, SuaChua.MaTB AS Expr5, SuaChua.thoigian AS Expr6, SuaChua.MaLSC AS Expr7, ThuHoi.Thoigian AS Expr8, ThuHoi.GhiChu AS Expr9, ThuHoi.MaTH, ThuHoi.MaPL, ThuHoi.MaTB AS Expr10, 
+                         ThuHoi.MaLTH AS Expr11, NhomThietBi.GhiChu AS Expr12, DonViTinh.TenDVT, DonViTinh.MaDVT, DonVi.FAX, DonVi.DiaDiem, DonVi.TenDonVi, DonVi.MaDV AS Expr13, NhomThietBi.TenNhom, NhomThietBi.MaNhom AS Expr14,
+                          ThietBi.MaDVT AS Expr15
+FROM            SuaChua INNER JOIN
+                         LoaiSuaChua ON SuaChua.MaLSC = LoaiSuaChua.MaLSC INNER JOIN
+                         ThietBi ON SuaChua.MaTB = ThietBi.MaTB INNER JOIN
+                         DonViTinh ON ThietBi.MaDVT = DonViTinh.MaDVT INNER JOIN
+                         NhaCungCap ON ThietBi.MaNCC = NhaCungCap.MaNCC INNER JOIN
+                         NhomThietBi ON ThietBi.MaNhom = NhomThietBi.MaNhom INNER JOIN
+                         DonVi INNER JOIN
+                         NguoiPhuTrach ON DonVi.MaDV = NguoiPhuTrach.MaDV ON ThietBi.MaDV = DonVi.MaDV INNER JOIN
+                         ThuHoi ON ThietBi.MaTB = ThuHoi.MaTB INNER JOIN
+                         LoaiThuHoi ON ThuHoi.MaLTH = LoaiThuHoi.MaLTH CROSS JOIN
+                         NguoiDung</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaLSC" DataSetColumn="MaLSC" />
+              <Mapping SourceColumn="TenLoaiSuaChua" DataSetColumn="TenLoaiSuaChua" />
+              <Mapping SourceColumn="LKThay" DataSetColumn="LKThay" />
+              <Mapping SourceColumn="MaNd" DataSetColumn="MaNd" />
+              <Mapping SourceColumn="Taikhoan" DataSetColumn="Taikhoan" />
+              <Mapping SourceColumn="Matkhau" DataSetColumn="Matkhau" />
+              <Mapping SourceColumn="GhiChu" DataSetColumn="GhiChu" />
+              <Mapping SourceColumn="TenLoaiThuHoi" DataSetColumn="TenLoaiThuHoi" />
+              <Mapping SourceColumn="MaLTH" DataSetColumn="MaLTH" />
+              <Mapping SourceColumn="MaNguoiPhuTrach" DataSetColumn="MaNguoiPhuTrach" />
+              <Mapping SourceColumn="TenNguoiPhuTrach" DataSetColumn="TenNguoiPhuTrach" />
+              <Mapping SourceColumn="ThoiGian" DataSetColumn="ThoiGian" />
+              <Mapping SourceColumn="MaDV" DataSetColumn="MaDV" />
+              <Mapping SourceColumn="SDT" DataSetColumn="SDT" />
+              <Mapping SourceColumn="TenNhaCungCap" DataSetColumn="TenNhaCungCap" />
+              <Mapping SourceColumn="MaNCC" DataSetColumn="MaNCC" />
+              <Mapping SourceColumn="DiaChi" DataSetColumn="DiaChi" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="TenThietBi" DataSetColumn="TenThietBi" />
+              <Mapping SourceColumn="MaTB" DataSetColumn="MaTB" />
+              <Mapping SourceColumn="MaNhom" DataSetColumn="MaNhom" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="Expr3" DataSetColumn="Expr3" />
+              <Mapping SourceColumn="SoLuong" DataSetColumn="SoLuong" />
+              <Mapping SourceColumn="TinhTrang" DataSetColumn="TinhTrang" />
+              <Mapping SourceColumn="Expr4" DataSetColumn="Expr4" />
+              <Mapping SourceColumn="ChatLuong" DataSetColumn="ChatLuong" />
+              <Mapping SourceColumn="MaSC" DataSetColumn="MaSC" />
+              <Mapping SourceColumn="Expr5" DataSetColumn="Expr5" />
+              <Mapping SourceColumn="Expr6" DataSetColumn="Expr6" />
+              <Mapping SourceColumn="Expr7" DataSetColumn="Expr7" />
+              <Mapping SourceColumn="Expr8" DataSetColumn="Expr8" />
+              <Mapping SourceColumn="Expr9" DataSetColumn="Expr9" />
+              <Mapping SourceColumn="MaTH" DataSetColumn="MaTH" />
+              <Mapping SourceColumn="MaPL" DataSetColumn="MaPL" />
+              <Mapping SourceColumn="Expr10" DataSetColumn="Expr10" />
+              <Mapping SourceColumn="Expr11" DataSetColumn="Expr11" />
+              <Mapping SourceColumn="Expr12" DataSetColumn="Expr12" />
+              <Mapping SourceColumn="TenDVT" DataSetColumn="TenDVT" />
+              <Mapping SourceColumn="MaDVT" DataSetColumn="MaDVT" />
+              <Mapping SourceColumn="FAX" DataSetColumn="FAX" />
+              <Mapping SourceColumn="DiaDiem" DataSetColumn="DiaDiem" />
+              <Mapping SourceColumn="TenDonVi" DataSetColumn="TenDonVi" />
+              <Mapping SourceColumn="Expr13" DataSetColumn="Expr13" />
+              <Mapping SourceColumn="TenNhom" DataSetColumn="TenNhom" />
+              <Mapping SourceColumn="Expr14" DataSetColumn="Expr14" />
+              <Mapping SourceColumn="Expr15" DataSetColumn="Expr15" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaLSC" msprop:Generator_ColumnVarNameInTable="columnMaLSC" msprop:Generator_ColumnPropNameInRow="MaLSC" msprop:Generator_ColumnPropNameInTable="MaLSCColumn" msprop:Generator_UserColumnName="MaLSC" type="xs:int" />
+              <xs:element name="TenLoaiSuaChua" msprop:Generator_ColumnVarNameInTable="columnTenLoaiSuaChua" msprop:Generator_ColumnPropNameInRow="TenLoaiSuaChua" msprop:Generator_ColumnPropNameInTable="TenLoaiSuaChuaColumn" msprop:Generator_UserColumnName="TenLoaiSuaChua">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LKThay" msprop:Generator_ColumnVarNameInTable="columnLKThay" msprop:Generator_ColumnPropNameInRow="LKThay" msprop:Generator_ColumnPropNameInTable="LKThayColumn" msprop:Generator_UserColumnName="LKThay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaNd" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMaNd" msprop:Generator_ColumnPropNameInRow="MaNd" msprop:Generator_ColumnPropNameInTable="MaNdColumn" msprop:Generator_UserColumnName="MaNd" type="xs:int" />
+              <xs:element name="Taikhoan" msprop:Generator_ColumnVarNameInTable="columnTaikhoan" msprop:Generator_ColumnPropNameInRow="Taikhoan" msprop:Generator_ColumnPropNameInTable="TaikhoanColumn" msprop:Generator_UserColumnName="Taikhoan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Matkhau" msprop:Generator_ColumnVarNameInTable="columnMatkhau" msprop:Generator_ColumnPropNameInRow="Matkhau" msprop:Generator_ColumnPropNameInTable="MatkhauColumn" msprop:Generator_UserColumnName="Matkhau" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GhiChu" msprop:Generator_ColumnVarNameInTable="columnGhiChu" msprop:Generator_ColumnPropNameInRow="GhiChu" msprop:Generator_ColumnPropNameInTable="GhiChuColumn" msprop:Generator_UserColumnName="GhiChu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenLoaiThuHoi" msprop:Generator_ColumnVarNameInTable="columnTenLoaiThuHoi" msprop:Generator_ColumnPropNameInRow="TenLoaiThuHoi" msprop:Generator_ColumnPropNameInTable="TenLoaiThuHoiColumn" msprop:Generator_UserColumnName="TenLoaiThuHoi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaLTH" msprop:Generator_ColumnVarNameInTable="columnMaLTH" msprop:Generator_ColumnPropNameInRow="MaLTH" msprop:Generator_ColumnPropNameInTable="MaLTHColumn" msprop:Generator_UserColumnName="MaLTH" type="xs:int" />
+              <xs:element name="MaNguoiPhuTrach" msprop:Generator_ColumnVarNameInTable="columnMaNguoiPhuTrach" msprop:Generator_ColumnPropNameInRow="MaNguoiPhuTrach" msprop:Generator_ColumnPropNameInTable="MaNguoiPhuTrachColumn" msprop:Generator_UserColumnName="MaNguoiPhuTrach" type="xs:int" />
+              <xs:element name="TenNguoiPhuTrach" msprop:Generator_ColumnVarNameInTable="columnTenNguoiPhuTrach" msprop:Generator_ColumnPropNameInRow="TenNguoiPhuTrach" msprop:Generator_ColumnPropNameInTable="TenNguoiPhuTrachColumn" msprop:Generator_UserColumnName="TenNguoiPhuTrach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ThoiGian" msprop:Generator_ColumnVarNameInTable="columnThoiGian" msprop:Generator_ColumnPropNameInRow="ThoiGian" msprop:Generator_ColumnPropNameInTable="ThoiGianColumn" msprop:Generator_UserColumnName="ThoiGian" type="xs:dateTime" />
+              <xs:element name="MaDV" msprop:Generator_ColumnVarNameInTable="columnMaDV" msprop:Generator_ColumnPropNameInRow="MaDV" msprop:Generator_ColumnPropNameInTable="MaDVColumn" msprop:Generator_UserColumnName="MaDV" type="xs:int" />
+              <xs:element name="SDT" msprop:Generator_ColumnVarNameInTable="columnSDT" msprop:Generator_ColumnPropNameInRow="SDT" msprop:Generator_ColumnPropNameInTable="SDTColumn" msprop:Generator_UserColumnName="SDT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenNhaCungCap" msprop:Generator_ColumnVarNameInTable="columnTenNhaCungCap" msprop:Generator_ColumnPropNameInRow="TenNhaCungCap" msprop:Generator_ColumnPropNameInTable="TenNhaCungCapColumn" msprop:Generator_UserColumnName="TenNhaCungCap">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaNCC" msprop:Generator_ColumnVarNameInTable="columnMaNCC" msprop:Generator_ColumnPropNameInRow="MaNCC" msprop:Generator_ColumnPropNameInTable="MaNCCColumn" msprop:Generator_UserColumnName="MaNCC" type="xs:int" />
+              <xs:element name="DiaChi" msprop:Generator_ColumnVarNameInTable="columnDiaChi" msprop:Generator_ColumnPropNameInRow="DiaChi" msprop:Generator_ColumnPropNameInTable="DiaChiColumn" msprop:Generator_UserColumnName="DiaChi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenThietBi" msprop:Generator_ColumnVarNameInTable="columnTenThietBi" msprop:Generator_ColumnPropNameInRow="TenThietBi" msprop:Generator_ColumnPropNameInTable="TenThietBiColumn" msprop:Generator_UserColumnName="TenThietBi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaTB" msprop:Generator_ColumnVarNameInTable="columnMaTB" msprop:Generator_ColumnPropNameInRow="MaTB" msprop:Generator_ColumnPropNameInTable="MaTBColumn" msprop:Generator_UserColumnName="MaTB" type="xs:int" />
+              <xs:element name="MaNhom" msprop:Generator_ColumnVarNameInTable="columnMaNhom" msprop:Generator_ColumnPropNameInRow="MaNhom" msprop:Generator_ColumnPropNameInTable="MaNhomColumn" msprop:Generator_UserColumnName="MaNhom" type="xs:int" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2" type="xs:int" />
+              <xs:element name="Expr3" msprop:Generator_ColumnVarNameInTable="columnExpr3" msprop:Generator_ColumnPropNameInRow="Expr3" msprop:Generator_ColumnPropNameInTable="Expr3Column" msprop:Generator_UserColumnName="Expr3" type="xs:int" />
+              <xs:element name="SoLuong" msprop:Generator_ColumnVarNameInTable="columnSoLuong" msprop:Generator_ColumnPropNameInRow="SoLuong" msprop:Generator_ColumnPropNameInTable="SoLuongColumn" msprop:Generator_UserColumnName="SoLuong">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TinhTrang" msprop:Generator_ColumnVarNameInTable="columnTinhTrang" msprop:Generator_ColumnPropNameInRow="TinhTrang" msprop:Generator_ColumnPropNameInTable="TinhTrangColumn" msprop:Generator_UserColumnName="TinhTrang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr4" msprop:Generator_ColumnVarNameInTable="columnExpr4" msprop:Generator_ColumnPropNameInRow="Expr4" msprop:Generator_ColumnPropNameInTable="Expr4Column" msprop:Generator_UserColumnName="Expr4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChatLuong" msprop:Generator_ColumnVarNameInTable="columnChatLuong" msprop:Generator_ColumnPropNameInRow="ChatLuong" msprop:Generator_ColumnPropNameInTable="ChatLuongColumn" msprop:Generator_UserColumnName="ChatLuong">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaSC" msprop:Generator_ColumnVarNameInTable="columnMaSC" msprop:Generator_ColumnPropNameInRow="MaSC" msprop:Generator_ColumnPropNameInTable="MaSCColumn" msprop:Generator_UserColumnName="MaSC" type="xs:int" />
+              <xs:element name="Expr5" msprop:Generator_ColumnVarNameInTable="columnExpr5" msprop:Generator_ColumnPropNameInRow="Expr5" msprop:Generator_ColumnPropNameInTable="Expr5Column" msprop:Generator_UserColumnName="Expr5" type="xs:int" />
+              <xs:element name="Expr6" msprop:Generator_ColumnVarNameInTable="columnExpr6" msprop:Generator_ColumnPropNameInRow="Expr6" msprop:Generator_ColumnPropNameInTable="Expr6Column" msprop:Generator_UserColumnName="Expr6" type="xs:dateTime" />
+              <xs:element name="Expr7" msprop:Generator_ColumnVarNameInTable="columnExpr7" msprop:Generator_ColumnPropNameInRow="Expr7" msprop:Generator_ColumnPropNameInTable="Expr7Column" msprop:Generator_UserColumnName="Expr7" type="xs:int" />
+              <xs:element name="Expr8" msprop:Generator_ColumnVarNameInTable="columnExpr8" msprop:Generator_ColumnPropNameInRow="Expr8" msprop:Generator_ColumnPropNameInTable="Expr8Column" msprop:Generator_UserColumnName="Expr8" type="xs:dateTime" />
+              <xs:element name="Expr9" msprop:Generator_ColumnVarNameInTable="columnExpr9" msprop:Generator_ColumnPropNameInRow="Expr9" msprop:Generator_ColumnPropNameInTable="Expr9Column" msprop:Generator_UserColumnName="Expr9" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaTH" msprop:Generator_ColumnVarNameInTable="columnMaTH" msprop:Generator_ColumnPropNameInRow="MaTH" msprop:Generator_ColumnPropNameInTable="MaTHColumn" msprop:Generator_UserColumnName="MaTH" type="xs:int" />
+              <xs:element name="MaPL" msprop:Generator_ColumnVarNameInTable="columnMaPL" msprop:Generator_ColumnPropNameInRow="MaPL" msprop:Generator_ColumnPropNameInTable="MaPLColumn" msprop:Generator_UserColumnName="MaPL" type="xs:int" />
+              <xs:element name="Expr10" msprop:Generator_ColumnVarNameInTable="columnExpr10" msprop:Generator_ColumnPropNameInRow="Expr10" msprop:Generator_ColumnPropNameInTable="Expr10Column" msprop:Generator_UserColumnName="Expr10" type="xs:int" />
+              <xs:element name="Expr11" msprop:Generator_ColumnVarNameInTable="columnExpr11" msprop:Generator_ColumnPropNameInRow="Expr11" msprop:Generator_ColumnPropNameInTable="Expr11Column" msprop:Generator_UserColumnName="Expr11" type="xs:int" />
+              <xs:element name="Expr12" msprop:Generator_ColumnVarNameInTable="columnExpr12" msprop:Generator_ColumnPropNameInRow="Expr12" msprop:Generator_ColumnPropNameInTable="Expr12Column" msprop:Generator_UserColumnName="Expr12" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenDVT" msprop:Generator_ColumnVarNameInTable="columnTenDVT" msprop:Generator_ColumnPropNameInRow="TenDVT" msprop:Generator_ColumnPropNameInTable="TenDVTColumn" msprop:Generator_UserColumnName="TenDVT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaDVT" msprop:Generator_ColumnVarNameInTable="columnMaDVT" msprop:Generator_ColumnPropNameInRow="MaDVT" msprop:Generator_ColumnPropNameInTable="MaDVTColumn" msprop:Generator_UserColumnName="MaDVT" type="xs:int" />
+              <xs:element name="FAX" msprop:Generator_ColumnVarNameInTable="columnFAX" msprop:Generator_ColumnPropNameInRow="FAX" msprop:Generator_ColumnPropNameInTable="FAXColumn" msprop:Generator_UserColumnName="FAX">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiaDiem" msprop:Generator_ColumnVarNameInTable="columnDiaDiem" msprop:Generator_ColumnPropNameInRow="DiaDiem" msprop:Generator_ColumnPropNameInTable="DiaDiemColumn" msprop:Generator_UserColumnName="DiaDiem">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenDonVi" msprop:Generator_ColumnVarNameInTable="columnTenDonVi" msprop:Generator_ColumnPropNameInRow="TenDonVi" msprop:Generator_ColumnPropNameInTable="TenDonViColumn" msprop:Generator_UserColumnName="TenDonVi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr13" msprop:Generator_ColumnVarNameInTable="columnExpr13" msprop:Generator_ColumnPropNameInRow="Expr13" msprop:Generator_ColumnPropNameInTable="Expr13Column" msprop:Generator_UserColumnName="Expr13" type="xs:int" />
+              <xs:element name="TenNhom" msprop:Generator_ColumnVarNameInTable="columnTenNhom" msprop:Generator_ColumnPropNameInRow="TenNhom" msprop:Generator_ColumnPropNameInTable="TenNhomColumn" msprop:Generator_UserColumnName="TenNhom">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr14" msprop:Generator_ColumnVarNameInTable="columnExpr14" msprop:Generator_ColumnPropNameInRow="Expr14" msprop:Generator_ColumnPropNameInTable="Expr14Column" msprop:Generator_UserColumnName="Expr14" type="xs:int" />
+              <xs:element name="Expr15" msprop:Generator_ColumnVarNameInTable="columnExpr15" msprop:Generator_ColumnPropNameInRow="Expr15" msprop:Generator_ColumnPropNameInTable="Expr15Column" msprop:Generator_UserColumnName="Expr15" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:MaLSC" />
+      <xs:field xpath="mstns:MaLTH" />
+      <xs:field xpath="mstns:MaNguoiPhuTrach" />
+      <xs:field xpath="mstns:MaNCC" />
+      <xs:field xpath="mstns:MaTB" />
+      <xs:field xpath="mstns:MaSC" />
+      <xs:field xpath="mstns:MaTH" />
+      <xs:field xpath="mstns:MaDVT" />
+      <xs:field xpath="mstns:Expr13" />
+      <xs:field xpath="mstns:Expr14" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

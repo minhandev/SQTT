@@ -50,8 +50,8 @@
             this.btlThem = new System.Windows.Forms.ToolStripButton();
             this.ThanhTacVu = new System.Windows.Forms.BindingNavigator(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbl = new System.Windows.Forms.ComboBox();
             this.cbbt = new System.Windows.Forms.ComboBox();
+            this.cbbl = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThanhTacVu)).BeginInit();
             this.ThanhTacVu.SuspendLayout();
@@ -259,14 +259,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
-            // cbbl
-            // 
-            this.cbbl.FormattingEnabled = true;
-            this.cbbl.Location = new System.Drawing.Point(471, 28);
-            this.cbbl.Name = "cbbl";
-            this.cbbl.Size = new System.Drawing.Size(131, 21);
-            this.cbbl.TabIndex = 18;
-            // 
             // cbbt
             // 
             this.cbbt.FormattingEnabled = true;
@@ -275,7 +267,15 @@
             this.cbbt.Size = new System.Drawing.Size(131, 21);
             this.cbbt.TabIndex = 19;
             // 
-            // floaithuhoi
+            // cbbl
+            // 
+            this.cbbl.FormattingEnabled = true;
+            this.cbbl.Location = new System.Drawing.Point(471, 28);
+            this.cbbl.Name = "cbbl";
+            this.cbbl.Size = new System.Drawing.Size(131, 21);
+            this.cbbl.TabIndex = 18;
+            // 
+            // fthuhoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -283,7 +283,8 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.ThanhTacVu);
             this.Controls.Add(this.groupBox1);
-            this.Name = "floaithuhoi";
+            this.Name = "fthuhoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOẠI THU HỒI";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThanhTacVu)).EndInit();

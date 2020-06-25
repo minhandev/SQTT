@@ -110,5 +110,22 @@ namespace WindowsFormsAppSQ
             f.Show();
             this.Hide();
         }
+
+        private void TTGoiThauTool_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BaoTriTool_Click(object sender, EventArgs e)
+        {
+            frpthietbi f = new frpthietbi();
+            f.Show();
+            this.Hide();
+        }
+
+        private void BaoHanhTool_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

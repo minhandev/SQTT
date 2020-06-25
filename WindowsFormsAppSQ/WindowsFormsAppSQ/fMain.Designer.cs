@@ -38,30 +38,12 @@
             this.ThoatTool = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.QuanLyTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTBenhVienTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTGoiThauTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTHopDongTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTThietBiTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTLinhKienTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.TTNguoiPhuTrachTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTNVKTTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.DVTTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TinhTrangTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.ThongKeTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TK_ThietBiTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TK_NgayThangTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TraCuuTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TraCuuTheoSoHopDongTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómSửaChữaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómThuHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhómĐơnVịTínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BaoCaoTool = new System.Windows.Forms.ToolStripMenuItem();
             this.BaoTriTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.BaoHanhTool = new System.Windows.Forms.ToolStripMenuItem();
             this.SuaChuaTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TroGiupTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.HDSDTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTTacGiaTool = new System.Windows.Forms.ToolStripMenuItem();
             this.ThanhChucNang = new System.Windows.Forms.ToolStrip();
             this.DonViStrip = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -75,9 +57,6 @@
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.TTBaoTriStrip = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.nhómSửaChữaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhómThuHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhómĐơnVịTínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuTool.SuspendLayout();
             this.ThanhChucNang.SuspendLayout();
             this.SuspendLayout();
@@ -89,11 +68,7 @@
             this.MenuTool.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.QuanLyTool,
-            this.ThongKeTool,
-            this.TraCuuTool,
-            this.BaoCaoTool,
-            this.TroGiupTool});
+            this.BaoCaoTool});
             this.MenuTool.Location = new System.Drawing.Point(0, 0);
             this.MenuTool.Name = "MenuTool";
             this.MenuTool.Size = new System.Drawing.Size(800, 24);
@@ -118,33 +93,33 @@
             // 
             this.DanhXuatTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhXuatTool.Name = "DanhXuatTool";
-            this.DanhXuatTool.Size = new System.Drawing.Size(173, 22);
+            this.DanhXuatTool.Size = new System.Drawing.Size(180, 22);
             this.DanhXuatTool.Text = "Đăng Xuất";
             this.DanhXuatTool.Click += new System.EventHandler(this.DanhXuatTool_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
             // 
             // NguoiDungTool
             // 
             this.NguoiDungTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NguoiDungTool.Name = "NguoiDungTool";
-            this.NguoiDungTool.Size = new System.Drawing.Size(173, 22);
+            this.NguoiDungTool.Size = new System.Drawing.Size(180, 22);
             this.NguoiDungTool.Text = "Quản Lý Người Dùng";
             this.NguoiDungTool.Click += new System.EventHandler(this.NguoiDungTool_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
             // 
             // ThoatTool
             // 
             this.ThoatTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThoatTool.Name = "ThoatTool";
-            this.ThoatTool.Size = new System.Drawing.Size(173, 22);
+            this.ThoatTool.Size = new System.Drawing.Size(180, 22);
             this.ThoatTool.Text = "Thoát";
             this.ThoatTool.Click += new System.EventHandler(this.ThoatTool_Click);
             // 
@@ -167,143 +142,31 @@
             this.nhómThiếtBịToolStripMenuItem.Text = "Nhóm thiết bị";
             this.nhómThiếtBịToolStripMenuItem.Click += new System.EventHandler(this.nhómThiếtBịToolStripMenuItem_Click);
             // 
-            // QuanLyTool
+            // nhómSửaChữaToolStripMenuItem
             // 
-            this.QuanLyTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TTBenhVienTool,
-            this.TTGoiThauTool,
-            this.TTHopDongTool,
-            this.TTThietBiTool,
-            this.TTLinhKienTool,
-            this.toolStripSeparator1,
-            this.TTNguoiPhuTrachTool,
-            this.TTNVKTTool,
-            this.toolStripSeparator2,
-            this.DVTTool,
-            this.TinhTrangTool});
-            this.QuanLyTool.ForeColor = System.Drawing.Color.Blue;
-            this.QuanLyTool.Name = "QuanLyTool";
-            this.QuanLyTool.Size = new System.Drawing.Size(64, 20);
-            this.QuanLyTool.Text = "Quản Lý";
+            this.nhómSửaChữaToolStripMenuItem.Name = "nhómSửaChữaToolStripMenuItem";
+            this.nhómSửaChữaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhómSửaChữaToolStripMenuItem.Text = "Nhóm sửa chữa";
+            this.nhómSửaChữaToolStripMenuItem.Click += new System.EventHandler(this.nhómSửaChữaToolStripMenuItem_Click);
             // 
-            // TTBenhVienTool
+            // nhómThuHồiToolStripMenuItem
             // 
-            this.TTBenhVienTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTBenhVienTool.Name = "TTBenhVienTool";
-            this.TTBenhVienTool.Size = new System.Drawing.Size(170, 22);
-            this.TTBenhVienTool.Text = "Thông tin Bệnh Viện";
+            this.nhómThuHồiToolStripMenuItem.Name = "nhómThuHồiToolStripMenuItem";
+            this.nhómThuHồiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhómThuHồiToolStripMenuItem.Text = "Nhóm thu hồi";
+            this.nhómThuHồiToolStripMenuItem.Click += new System.EventHandler(this.nhómThuHồiToolStripMenuItem_Click);
             // 
-            // TTGoiThauTool
+            // nhómĐơnVịTínhToolStripMenuItem
             // 
-            this.TTGoiThauTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTGoiThauTool.Name = "TTGoiThauTool";
-            this.TTGoiThauTool.Size = new System.Drawing.Size(170, 22);
-            this.TTGoiThauTool.Text = "Thông tin Gói Thầu";
-            // 
-            // TTHopDongTool
-            // 
-            this.TTHopDongTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTHopDongTool.Name = "TTHopDongTool";
-            this.TTHopDongTool.Size = new System.Drawing.Size(170, 22);
-            this.TTHopDongTool.Text = "Thông tin Hợp Đồng";
-            // 
-            // TTThietBiTool
-            // 
-            this.TTThietBiTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTThietBiTool.Name = "TTThietBiTool";
-            this.TTThietBiTool.Size = new System.Drawing.Size(170, 22);
-            this.TTThietBiTool.Text = "Thông tin Thiết Bị";
-            // 
-            // TTLinhKienTool
-            // 
-            this.TTLinhKienTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTLinhKienTool.Name = "TTLinhKienTool";
-            this.TTLinhKienTool.Size = new System.Drawing.Size(170, 22);
-            this.TTLinhKienTool.Text = "Thông tin Linh Kiện";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
-            // 
-            // TTNguoiPhuTrachTool
-            // 
-            this.TTNguoiPhuTrachTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTNguoiPhuTrachTool.Name = "TTNguoiPhuTrachTool";
-            this.TTNguoiPhuTrachTool.Size = new System.Drawing.Size(170, 22);
-            this.TTNguoiPhuTrachTool.Text = "Người Phụ Trách";
-            // 
-            // TTNVKTTool
-            // 
-            this.TTNVKTTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTNVKTTool.Name = "TTNVKTTool";
-            this.TTNVKTTool.Size = new System.Drawing.Size(170, 22);
-            this.TTNVKTTool.Text = "Nhân Viên Kỹ Thuật";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(167, 6);
-            // 
-            // DVTTool
-            // 
-            this.DVTTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DVTTool.Name = "DVTTool";
-            this.DVTTool.Size = new System.Drawing.Size(170, 22);
-            this.DVTTool.Text = "Đơn Vị Tính";
-            // 
-            // TinhTrangTool
-            // 
-            this.TinhTrangTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TinhTrangTool.Name = "TinhTrangTool";
-            this.TinhTrangTool.Size = new System.Drawing.Size(170, 22);
-            this.TinhTrangTool.Text = "Tình Trạng";
-            // 
-            // ThongKeTool
-            // 
-            this.ThongKeTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TK_ThietBiTool,
-            this.TK_NgayThangTool});
-            this.ThongKeTool.ForeColor = System.Drawing.Color.Blue;
-            this.ThongKeTool.Name = "ThongKeTool";
-            this.ThongKeTool.Size = new System.Drawing.Size(71, 20);
-            this.ThongKeTool.Text = "Thống Kê";
-            // 
-            // TK_ThietBiTool
-            // 
-            this.TK_ThietBiTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TK_ThietBiTool.Name = "TK_ThietBiTool";
-            this.TK_ThietBiTool.Size = new System.Drawing.Size(159, 22);
-            this.TK_ThietBiTool.Text = "Theo Thiết Bị";
-            // 
-            // TK_NgayThangTool
-            // 
-            this.TK_NgayThangTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TK_NgayThangTool.Name = "TK_NgayThangTool";
-            this.TK_NgayThangTool.Size = new System.Drawing.Size(159, 22);
-            this.TK_NgayThangTool.Text = "Theo Ngày Tháng";
-            // 
-            // TraCuuTool
-            // 
-            this.TraCuuTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TraCuuTheoSoHopDongTool});
-            this.TraCuuTool.ForeColor = System.Drawing.Color.Blue;
-            this.TraCuuTool.Name = "TraCuuTool";
-            this.TraCuuTool.Size = new System.Drawing.Size(63, 20);
-            this.TraCuuTool.Text = "Tra Cứu";
-            // 
-            // TraCuuTheoSoHopDongTool
-            // 
-            this.TraCuuTheoSoHopDongTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TraCuuTheoSoHopDongTool.Name = "TraCuuTheoSoHopDongTool";
-            this.TraCuuTheoSoHopDongTool.Size = new System.Drawing.Size(162, 22);
-            this.TraCuuTheoSoHopDongTool.Text = "Tra Cứu Tổng Hợp";
+            this.nhómĐơnVịTínhToolStripMenuItem.Name = "nhómĐơnVịTínhToolStripMenuItem";
+            this.nhómĐơnVịTínhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhómĐơnVịTínhToolStripMenuItem.Text = "Nhóm đơn vị tính";
+            this.nhómĐơnVịTínhToolStripMenuItem.Click += new System.EventHandler(this.nhómĐơnVịTínhToolStripMenuItem_Click);
             // 
             // BaoCaoTool
             // 
             this.BaoCaoTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BaoTriTool,
-            this.BaoHanhTool,
             this.SuaChuaTool});
             this.BaoCaoTool.ForeColor = System.Drawing.Color.Blue;
             this.BaoCaoTool.Name = "BaoCaoTool";
@@ -314,47 +177,16 @@
             // 
             this.BaoTriTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BaoTriTool.Name = "BaoTriTool";
-            this.BaoTriTool.Size = new System.Drawing.Size(122, 22);
-            this.BaoTriTool.Text = "Bảo Trì";
-            // 
-            // BaoHanhTool
-            // 
-            this.BaoHanhTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaoHanhTool.Name = "BaoHanhTool";
-            this.BaoHanhTool.Size = new System.Drawing.Size(122, 22);
-            this.BaoHanhTool.Text = "Bảo Hành";
+            this.BaoTriTool.Size = new System.Drawing.Size(180, 22);
+            this.BaoTriTool.Text = "Thiết bị";
+            this.BaoTriTool.Click += new System.EventHandler(this.BaoTriTool_Click);
             // 
             // SuaChuaTool
             // 
             this.SuaChuaTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuaChuaTool.Name = "SuaChuaTool";
-            this.SuaChuaTool.Size = new System.Drawing.Size(122, 22);
+            this.SuaChuaTool.Size = new System.Drawing.Size(180, 22);
             this.SuaChuaTool.Text = "Sửa Chữa";
-            // 
-            // TroGiupTool
-            // 
-            this.TroGiupTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HDSDTool,
-            this.TTTacGiaTool});
-            this.TroGiupTool.ForeColor = System.Drawing.Color.Blue;
-            this.TroGiupTool.Name = "TroGiupTool";
-            this.TroGiupTool.Size = new System.Drawing.Size(66, 20);
-            this.TroGiupTool.Text = "Trợ Giúp";
-            // 
-            // HDSDTool
-            // 
-            this.HDSDTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HDSDTool.Name = "HDSDTool";
-            this.HDSDTool.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.HDSDTool.Size = new System.Drawing.Size(191, 22);
-            this.HDSDTool.Text = "Hướng Dẫn Sử Dụng";
-            // 
-            // TTTacGiaTool
-            // 
-            this.TTTacGiaTool.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTTacGiaTool.Name = "TTTacGiaTool";
-            this.TTTacGiaTool.Size = new System.Drawing.Size(191, 22);
-            this.TTTacGiaTool.Text = "Thông tin liên hệ";
             // 
             // ThanhChucNang
             // 
@@ -485,27 +317,6 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 45);
             // 
-            // nhómSửaChữaToolStripMenuItem
-            // 
-            this.nhómSửaChữaToolStripMenuItem.Name = "nhómSửaChữaToolStripMenuItem";
-            this.nhómSửaChữaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nhómSửaChữaToolStripMenuItem.Text = "Nhóm sửa chữa";
-            this.nhómSửaChữaToolStripMenuItem.Click += new System.EventHandler(this.nhómSửaChữaToolStripMenuItem_Click);
-            // 
-            // nhómThuHồiToolStripMenuItem
-            // 
-            this.nhómThuHồiToolStripMenuItem.Name = "nhómThuHồiToolStripMenuItem";
-            this.nhómThuHồiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nhómThuHồiToolStripMenuItem.Text = "Nhóm thu hồi";
-            this.nhómThuHồiToolStripMenuItem.Click += new System.EventHandler(this.nhómThuHồiToolStripMenuItem_Click);
-            // 
-            // nhómĐơnVịTínhToolStripMenuItem
-            // 
-            this.nhómĐơnVịTínhToolStripMenuItem.Name = "nhómĐơnVịTínhToolStripMenuItem";
-            this.nhómĐơnVịTínhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nhómĐơnVịTínhToolStripMenuItem.Text = "Nhóm đơn vị tính";
-            this.nhómĐơnVịTínhToolStripMenuItem.Click += new System.EventHandler(this.nhómĐơnVịTínhToolStripMenuItem_Click);
-            // 
             // fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,30 +347,9 @@
         private System.Windows.Forms.ToolStripMenuItem NguoiDungTool;
         private System.Windows.Forms.ToolStripMenuItem ThoatTool;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem QuanLyTool;
-        private System.Windows.Forms.ToolStripMenuItem TTBenhVienTool;
-        private System.Windows.Forms.ToolStripMenuItem TTGoiThauTool;
-        private System.Windows.Forms.ToolStripMenuItem TTHopDongTool;
-        private System.Windows.Forms.ToolStripMenuItem TTThietBiTool;
-        private System.Windows.Forms.ToolStripMenuItem TTLinhKienTool;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem TTNguoiPhuTrachTool;
-        private System.Windows.Forms.ToolStripMenuItem TTNVKTTool;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem DVTTool;
-        private System.Windows.Forms.ToolStripMenuItem TinhTrangTool;
-        private System.Windows.Forms.ToolStripMenuItem ThongKeTool;
-        private System.Windows.Forms.ToolStripMenuItem TK_ThietBiTool;
-        private System.Windows.Forms.ToolStripMenuItem TK_NgayThangTool;
-        private System.Windows.Forms.ToolStripMenuItem TraCuuTool;
-        private System.Windows.Forms.ToolStripMenuItem TraCuuTheoSoHopDongTool;
         private System.Windows.Forms.ToolStripMenuItem BaoCaoTool;
         private System.Windows.Forms.ToolStripMenuItem BaoTriTool;
-        private System.Windows.Forms.ToolStripMenuItem BaoHanhTool;
         private System.Windows.Forms.ToolStripMenuItem SuaChuaTool;
-        private System.Windows.Forms.ToolStripMenuItem TroGiupTool;
-        private System.Windows.Forms.ToolStripMenuItem HDSDTool;
-        private System.Windows.Forms.ToolStripMenuItem TTTacGiaTool;
         private System.Windows.Forms.ToolStrip ThanhChucNang;
         private System.Windows.Forms.ToolStripButton DonViStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;

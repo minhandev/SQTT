@@ -25,6 +25,14 @@ namespace WindowsFormsAppSQ
             var data = from c in db.ThuHois select new { Mã = c.MaTH, Tên_thiết_bị = c.ThietBi.TenThietBi, Loại_thu_hồi = c.LoaiThuHoi.TenLoaiThuHoi, Thời_gian = c.Thoigian, Ghi_chú = c.GhiChu };
             dataGridView.DataSource = data.ToList();
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            cbbt.DataSource = db.ThietBis.ToList();
+            cbbt.DisplayMember = "TenThietBi";
+            cbbt.ValueMember = "MaTB";
+
+            cbbl.DataSource = db.LoaiThuHois.ToList();
+            cbbl.DisplayMember = "TenLoaiThuHoi";
+            cbbl.ValueMember = "MaLTH";
         }
 
         private void Biding()

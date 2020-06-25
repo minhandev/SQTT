@@ -88,6 +88,8 @@ namespace WindowsFormsAppSQ
         private void btlThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
+            fmain f = new fmain();
+            //f.Show();
         }
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
